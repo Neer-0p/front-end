@@ -1,0 +1,14 @@
+<html>
+<body style="background-color:blue;">
+<t>MOVIES OF 2025</t>
+<a href="https://www.moviesof2025.com"></a>
+
+<h1 style="background-color:red;">K.G.F</h1>
+<p1>KGF was the highest grossing <br> movie in the world.</p1>
+<img src="a.jpg"  width="200" height="200">
+
+<h2>Hollywood</h2>
+<p2>REACHER</p2>
+<img src="c.jpg" width="200" height="200"
+</body>
+</html>
