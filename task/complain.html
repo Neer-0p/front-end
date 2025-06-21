@@ -19,8 +19,8 @@
             <hr>
             <tr>
                 <td>Full name <span style="color: red;">*</span></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input type="text" required pattern="[A-Za-z]{3,8}"></td>
+                <td><input type="text" required pattern="[A-Za-z]{3,8}"></td>
             </tr>
             <tr>
                 <td></td>
@@ -29,7 +29,7 @@
             </tr>
             <tr>
                 <td>Email <span style="color: red;">*</span></td>
-                <td><input type="email"></td>
+                <td><input type="email" required pattern="[a-z0-9]+@[a-z]+.[a-z]{2, 3}$"></td>
             </tr>
             <tr>
                 <td>Phone</td>
@@ -37,7 +37,7 @@
             </tr>
             <tr>
                 <td>Where did we go wrong? <span style="color: red;">*</span></td>
-                <td><textarea></textarea></td>
+                <td><textarea></textarea required </td>
             </tr>
             <tr>
 

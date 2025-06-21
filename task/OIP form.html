@@ -9,15 +9,15 @@
     <form action="">
         <div>
             <label for="">Firstname</label>
-            <input type="text">
+            <input type="text" required pattern="[A-Za-z]{3,8}">
         </div>
         <div>
             <label for="">Middlename:</label>
-            <input type="text">
+            <input type="text" required pattern="[A-Za-z]{3,8}">
         </div>
         <div>
             <label for="">Lastname:</label>
-            <input type="text">
+            <input type="text" required pattern="[A-Za-z]{3,8}">
         </div>
         <div>
             <label for="">Course:</label>
@@ -40,7 +40,7 @@
             <select>
                 <option value="">+91</option>
             </select>
-            <input type="tel">
+            <input type="tel" required pattern="[6789][0-9]{9}" maxlength="10">
         </div>
         <div>
             <div><label for="">Address</label></div>
@@ -48,15 +48,15 @@
         </div>
         <div>
             <label for="">Email:</label>
-            <input type="email">
+            <input type="email" required pattern="[a-z0-9]+@[a-z]+.[a-z]{2, 3}$">
         </div>
         <div>
             <label for="">Password:</label>
-            <input type="password">
+            <input type="password" required pattern="[A-Za-z0-9@]{8,12}">
         </div>
         <div>
             <label for="">Re-type password:</label>
-            <input type="password">
+            <input type="password" required pattern="[A-Za-z0-9@]{8,12}">
         </div>
         <input type="submit">
     </form>

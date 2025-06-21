@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form</title>
 </head>
-<body>
+<body style="background-color: aqua;">
     <table  align="center">
         <caption><h3><u>Student Registration Form Using Table in HTML</u></h3></caption>
         <form action="">
             <tr>
                 <td>First Name</td>
-                <td><input type="text" placeholder="Ghanendra">(Max 50 Character Allowed)</td>
+                <td><input type="text" placeholder="Ghanendra" required pattern="[A-Za-z]{3,8}">(Max 50 Character Allowed)</td>
             </tr>
             <tr>
                 <td>Last Name</td>
-                <td><input type="text" placeholder="Yadav">(Max 50 Character Allowed)</td>
+                <td><input type="text" placeholder="Yadav" required pattern="[A-Za-z]{3,8}">(Max 50 Character Allowed)</td>
             </tr>
             <tr>
                 <td>Email ID</td>
-                <td><input type="email" placeholder="yghanendra@gmail.com"></td>
+                <td><input type="email" placeholder="yghanendra@gmail.com" required pattern="[a-z0-9]+@[a-z]+.[a-z]{2, 3}$"></td>
             </tr>
             <tr>
                 <td>Mobile Number</td>
-                <td><input type="tel" placeholder="7843xxxxxx">(10Digit Allowed)</td>
+                <td><input type="tel" placeholder="7843xxxxxx" required pattern="[6789][0-9]{1,9}" maxlength="10">(10Digit Allowed)</td>
             </tr>
             <tr>
                 <td>Gender</td>
@@ -47,19 +47,19 @@
             </tr>
             <tr>
                 <td>City</td>
-                <td><input type="text" placeholder="Banglore">(Max 50 Character Allowed)</td>
+                <td><input type="text" placeholder="Banglore" required pattern="[A-Za-z]">(Max 50 Character Allowed)</td>
             </tr>
             <tr>
                 <td>Pin Code</td>
-                <td><input type="number" placeholder="560068">(Max 6 Number Allowed)</td>
+                <td><input type="number" placeholder="560068" required pattern="[0-9]{1,6}" maxlength="6">(Max 6 Number Allowed)</td>
             </tr>
             <tr>
                 <td>State</td>
-                <td><input type="text" placeholder="Karnataka">(Max 50 Character Allowed)</td>
+                <td><input type="text" placeholder="Karnataka" required pattern="[A-Za-z]">(Max 50 Character Allowed)</td>
             </tr>
             <tr>
                 <td>Country</td>
-                <td><input type="text" placeholder="India"></td>
+                <td><input type="text" placeholder="India" required pattern="[A-Za-z]"></td>
             </tr>
             <tr>
                 <td>Hobbies</td>
