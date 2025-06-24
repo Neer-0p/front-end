@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 1</title>
+</head>
+
+<body>
+    <h1><u>Stand up Comedy <br>By <span style="color: gold;"><i>SAMAY RAINA</i></span></u></h1>
+    <video width="200px" src="/Assignment/HTML 5/LAB/100298-video-720.mp4" controls autoplay loop></video>
+
+    <audio src="/Assignment/HTML 5/LAB/haunted-mobile-homes-larry-weaver-comedy.mp3" controls autoplay loop></audio>
+
+    <h2>Create some shape using canvas tag in html</h2>
+    <canvas id="GFG" 
+            width="500" 
+            height="250" ;> 
+      </canvas>
+    <script>
+        let g = document.getElementById("GFG");
+        let geeks = g.getContext("2d");
+        geeks.shadowBlur = 20;
+        geeks.shadowColor = "yellow";
+        geeks.fillStyle = "red";
+        geeks.fillRect(30, 20, 100, 80);
+    </script>
+    <h2>Create some shape using svg tag in html</h2>
+    <svg width="200" 
+             height="200" 
+             style="border: 2px solid black;">
+            <circle cx="95" 
+                    cy="95"
+                    r="70" 
+                    stroke="green" 
+                    stroke-width="5" 
+                    fill="yellowgreen" />
+        </svg>
+
+</body>
+
+</html>
