@@ -5,56 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assesment_1</title>
+    <link rel="stylesheet" href="/Assesment/HTML with css.html/style.css">
 </head>
 
 <body>
-    <h1>Student Registration Form</h1>
-    <form action="">
-        <div><label for="">First Name:</label></div>
-        <div><input type="text" placeholder="Enter your first name" required pattern="[A-Za-z]{3,8}" maxlength="8">
-        </div>
-        <div><label for="">Last Name:</label></div>
-        <div><input type="text" placeholder="Enter your Last name" required pattern="[A-Za-z]{3,8}" maxlength="8">
-        </div>
-        <div><label for="">Email:</label></div>
-        <div><input type="email" placeholder="it should contain @.." required pattern="[a-z0-9]+@+[a-z]+.+[a-z]{2,3}$">
-        </div>
-        <div><label for="">Mobile:</label></div>
-        <div><input type="tel" placeholder="only 10 digits are allowed" required pattern="[6,7,8,9][0-9]{1,9}"
-                maxlength="10"></div>
-        <div><label for="">Gender:</label></div>
-        <div><input type="radio" name="gender" id="">Male
-            <input type="radio" name="gender" id="">Female
-        </div>
-        <div><label for="">Date Of Birth:</label></div>
-        <div><input type="date" name="" id=""></div>
-        <div><label for="">Address:</label></div>
-        <div><textarea name="" id="" cols="30" rows="10"></textarea></div>
-        <div><label for="">City:</label></div>
-        <div><input type="text" placeholder="" required pattern="[A-Za-z]{3,8}" maxlength="8">
-        </div>
-        <div></div>
-        <div><label for="">Area PIN:</label></div>
-        <div><input type="number" required pattern="[0-9]{1,6}" maxlength="6"></div>
-        <div><label for="">State:</label></div>
-        <div><input type="text" required pattern="[A-Za-z]{3,9}" maxlength="8"></div>
-        <div><label for="">Qualification:</label></div>
-        <div><select name="" id="">
-                <option value="" hidden>Select Qualification</option>
-                <option value="">IT</option>
-                <option value="">10th Pass</option>
-                <option value="">12th Pass</option>
-                <option value="">Graduate</option>
-            </select></div>
-        <div><label for="">Specialization:</label></div>
-        <div><input type="checkbox">Computer Science</div>
-        <div><input type="checkbox">Information Technology</div>
-        <div> <input type="checkbox">Computer Architecture</div>
-        <div> <input type="checkbox">Tele Communication</div>
-        <div><label for="">Password:</label></div>
-        <div><input type="password" pattern="[A-Za-z0-9@.]{8,12}"></div>
-        <div><input type="submit" value="Registered"></div>
-    </form>
-</body>
+    <h4>Student Registration Form</h4>
+    <div id="x">
+        <form action="">
+            <div><label for="">First Name:</label>
+                <input type="text" placeholder="Enter your first name" required pattern="[A-Za-z]{3,8}" maxlength="8">
+            </div>
+            <div><label for="">Last Name:</label>
+                <input type="text" placeholder="Enter your Last name" required pattern="[A-Za-z]{3,8}" maxlength="8">
+            </div>
+            <div><label for="">Email:</label>
+                <input id="a" type="email" placeholder="it should contain @.." required
+                    pattern="[a-z0-9]+@+[a-z]+.+[a-z]{2,3}$">
+            </div>
 
+            <div><label for="">Mobile:</label>
+                <input type="tel" placeholder="only 10 digits are allowed" required pattern="[6,7,8,9][0-9]{1,9}"
+                    maxlength="10">
+            </div>
+            <div><label for="">Gender:</label>
+                <input type="radio" name="gender" id="">Male
+                <input type="radio" name="gender" id="">Female
+            </div>
+
+            <div><label for="">Date Of Birth:</label>
+                <input type="date" name="" id="">
+            </div>
+            <div><label for="" class="y">Address:</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div><label for="">City:</label>
+                <input type="text" placeholder="" required pattern="[A-Za-z]{3,8}" maxlength="8">
+            </div>
+
+            <div><label for="">Area PIN:</label>
+                <input type="number" required pattern="[0-9]{1,6}" maxlength="6">
+            </div>
+            <div><label for="">State:</label>
+                <input type="text" required pattern="[A-Za-z]{3,9}" maxlength="8">
+            </div>
+            <div><label for="">Qualification:</label>
+                <select name="" id="">
+                    <option value="" hidden>Select Qualification</option>
+                    <option value="">IT</option>
+                    <option value="">10th Pass</option>
+                    <option value="">12th Pass</option>
+                    <option value="">Graduate</option>
+                </select>
+            </div>
+            <div><label for="" class="y">Specialization:</label>
+                <ul>
+                <li><input type="checkbox"><span>Computer Science</span></li>
+                <li><input type="checkbox"><span>Information Technology</span></li>
+                <li><input type="checkbox"><span>Computer Architecture</span></li>
+                <li><input type="checkbox"><span>Tele Communication</span></li></ul>
+            </div>
+            <div><label for="">Password:</label>
+                <input type="password" pattern="[A-Za-z0-9@.]{8,12}">
+            </div>
+            <input id="n" type="submit" value="Registered">
+        </form>
+    </div>
+</body>
 </html>
