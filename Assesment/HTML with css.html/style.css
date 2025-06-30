@@ -1,3 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
 h4{
     text-align: center;
     color: red;
@@ -32,3 +43,7 @@ ul{
     color: white;
     border: none;
 }
+/* #m{
+    margin: 0 !important;
+} */
+
