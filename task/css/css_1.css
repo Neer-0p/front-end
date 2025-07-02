@@ -1,0 +1,25 @@
+*{
+    text-transform: capitalize;
+}
+body{
+    background-color: black;
+}
+h1{
+    text-align: center;
+    color: goldenrod;
+    text-decoration: underline;
+}
+.triangle{
+    height: 200px;
+    width: 200px;
+    background-color: lightskyblue;
+    margin: 50px;
+    clip-path: polygon(50% 0%,0% 100%,100% 100%);
+}
+.hexagon{
+    height: 200px;
+    width: 200px;
+    background-color: lightskyblue;
+    margin: 50px;
+    clip-path: polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+}
