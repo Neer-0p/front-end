@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            height: 550px;
+            width: 260px;
+            border: 2px solid;
+            box-shadow: 0 0 10px 10px rgba(54, 52, 52, 0.5);
+            margin: 0% auto;
+            position: relative;
+        }
+
+        .photo {
+            height: 276px;
+            width: 245px;
+            transition: 0.5s;
+        }
+
+        .div1:hover .photo {
+            transform: rotateY(180deg);
+        }
+
+        .text {
+            text-align: center;
+            background-color: black;
+            color: white;
+            transform: translateY(-300px);
+            transition: 0.8s;
+            opacity: 0;
+        }
+
+        .div1:hover .text {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        .text:hover {
+            background-color: aqua;
+            color: white;
+        }
+
+        .h3 {
+            text-align: center;
+            color: orange;
+        }
+
+        .price {
+            margin-left: 7px;
+            text-align: center;
+            word-spacing: 10px;
+        }
+        .box {
+            height: 30px;
+            width: 100px;
+            margin: 10% 29%;
+            border: 3px solid aqua;
+            transition: 0.5s;
+        }
+        .box:hover {
+            transform: scale(1.5);
+        }
+        .btn {
+            height: 30px;
+            width: 100px;
+            margin: 10% auto;
+            background-color: aqua;
+            position: absolute;
+            bottom: 48px;
+            left: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="div1"><img
+                src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m8.jpg"
+                alt="" class="photo"></a>
+            <h1 class="text">Quick View</h1>
+        </div>
+        <div>
+            <h3 class="h3">Party Men's Blazer</h3>
+            <div class="price"><span>$260.99</span> <del>$390.71</del></div>
+            <div class="box"></div>
+            <div class="btn"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
