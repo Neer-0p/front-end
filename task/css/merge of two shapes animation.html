@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effect</title>
+    <style>
+        .car {
+            height: 300px;
+            width: 600px;
+            background: url(https://images.hdqwalls.com/download/1969-ringbrothers-dodge-charger-tusk-5k-nw-2560x1080.jpg);
+            background-size: 100% 100%;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+
+        .circle {
+            height: 500px;
+            width: 1300px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            position: absolute;
+            top: 100%;
+            transition: .8s;
+        }
+
+        .car:hover .circle {
+            position: absolute;
+            top: 0%;
+            right: 0%;
+        }
+
+
+        .square {
+            height: 300px;
+            width: 600px;
+            background-color: rgba(189, 165, 31, 0.4);
+            border-radius: 50px;
+            position: absolute;
+            right: 50%;
+            transition: .6s;
+        }
+
+        .car:hover .square {
+            position: absolute;
+            right: 90%;
+        }
+
+        .square2 {
+            height: 300px;
+            width: 600px;
+            background-color: rgba(189, 165, 31, 0.4);
+            border-radius: 50px;
+            position: absolute;
+            left: 50%;
+            transition: .6s;
+        }
+        .car:hover .square2{
+            position: absolute;
+            left: 90%;
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <div class="car">
+        <div class="square"></div>
+        <div class="square2"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>
