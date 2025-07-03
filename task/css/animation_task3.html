@@ -10,27 +10,32 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .main {
-            height: 35px;
-            width: 35px;
-            padding: 10px;
+            height: 50px;
+            width: 50px;
             margin: 100px auto;
             font-size: xx-large;
             text-align: center;
             background-color: black;
             color: white;
-            transform: scale(1);
+            /* overflow: hidden; */
         }
-
-        .main:hover {
-            transform: scale(1.4);
-            background-color: lightgreen;
+        .movable{
+            height: 50px;
+            width: 50px;
+            background-color: green;
+            color: white;
+            transform: scale(0);
+            transition: 0.5s;
+        }
+        .main:hover .movable{
+            transform: scale(1);
         }
     </style>
 </head>
 
 <body style="background-color: crimson;">
-    <div class="main"> <i class="fa-solid fa-headphones-simple"></i>
-
+    <div class="main">
+        <div class="movable"></div>
     </div>
 </body>
 
