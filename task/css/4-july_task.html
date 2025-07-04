@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+    <style>
+        *{
+            text-transform: capitalize;
+            text-decoration: none;
+            color: white;
+        }
+        .img{
+            height: 400px;
+            width: 400px;
+            background: url(https://p.w3layouts.com/demos_new/template_demo/26-08-2021/webservice-liberty-demo_Free/1229779082/web/assets/images/p3.jpg);
+            background-size: 100% 100%;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .effect{
+            height: 400px;
+            width: 400px;
+            background-color: rgba(0, 0, 0, 0.4);
+            transition: .8s;
+            opacity: 0;
+        }
+        .text{
+            margin: 20px;
+            position: absolute;
+            bottom: 10%;
+        }
+        .img:hover .effect{
+            opacity: 100%;
+        }
+        .text .text-h1 a:hover{
+            color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <div class="img">
+        <div class="effect">
+            <div class="text">
+                <h1 class="text-h1"><a href="">ecommerce</a></h1>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quia.
+            </div>
+        </div>   
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <style>
+        ul li{
+            display: inline-block;
+            background-color: black;
+            padding: 10px 20px;
+            position: relative;
+        }
+        ul li a{
+            text-transform: capitalize;
+            text-decoration: none;
+            color: white;
+        }
+        ul li::after{
+            content: "";
+            height: 5px;
+            width: 100%;
+            background-color: aqua;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transform: scale(0);
+            transition: .7s;
+        }
+        li:hover::after{
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="">home</a></li>
+        <li><a href="">more</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">address</a></li>
+        <li><a href="">contact us</a></li>
+    </ul>
+</body>
+</html>
