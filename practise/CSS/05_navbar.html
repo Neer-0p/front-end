@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            text-transform: capitalize;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            background-color: rgb(33, 33, 171);
+            padding: 20px;
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            line-height: 30px;
+            border: 2px solid white;
+        }
+
+        .logo {
+            font-size: 30px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="logo">
+            <i class="fa-brands fa-html5"></i>
+        </div>
+        <div class="data">
+            <label><a href="">home</a></label>
+            <label><a href="">about</a></label>
+            <label class="button"><a href="">services<i class="fa-sharp-duotone fa-solid fa-caret-down"></i></a></label>
+            <label></label><a href="">blogs</a></label>
+            <label><a href="">contact</a></label>
+            <label><a href="" style="background: white;color: black;">login</a></label>
+        </div>
+    </div>
+</body>
+
+</html>

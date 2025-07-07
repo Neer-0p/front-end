@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .main{
+            height: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(pink,purple,blue);
+            box-shadow: 10px 10px 10px 2px rgb(135, 44, 153);
+        }
+        .left .list{
+            font-size: 30px;
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .list{
+            font-size: 20px;
+        }
+        .right .list2{
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px;
+            position: relative;
+        }
+        .list2{
+            font-size: 30px;
+        }
+        .drop{
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            padding: 0;
+            display: none;
+        }
+        .drop li{
+            list-style: none;
+            padding: 5px;
+            background: linear-gradient(blue,pink,purple);
+            color: white;
+            border-bottom: 2px solid white;
+        }
+        .list2:hover .drop{
+            display: block;
+        }
+        
+    </style>
+</head>
+
+<body style="background-color: BLACK;">
+    <div class="main">
+        <ul class="left">
+            <li class="list"><i class="fa-brands fa-linkedin"></i></li>
+            <li class="list"><input type="search" placeholder="Type query"></li>
+        </ul>
+        <ul class="right">
+            <li class="list2"><i class="fa-solid fa-house"></i>
+            <ul class="drop">
+                <li>link1</li>
+                <li>link2</li>
+                <li>link3</li>
+                <li>link4 </li>
+            </ul>
+        </li>
+            <li class="list2"><i class="fa-solid fa-users"></i></li> 
+            <li class="list2"><i class="fa-solid fa-briefcase"></i></li>
+            <li class="list2"><i class="fa-solid fa-bell"></i></li>
+            <li class="list2" style="padding-right: 30px;"><i class="fa-solid fa-message"></i></li>
+        </ul>
+    </div>
+</body>
+
+</html>

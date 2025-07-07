@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Card_layout</title>
     <style>
         .main {
             height: 400px;
@@ -38,6 +38,20 @@
         }
 
         .main:hover .img {
+            transform: rotateY(180deg);
+        }
+        .img2 {
+            height: 250px;
+            width: 200px;
+            background: url(https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m2.jpg);
+            background-size: 100% 100%;
+            margin: 0 auto;
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            transition: 1s;
+        }
+        .main:hover .img2 {
             transform: rotateY(180deg);
         }
 
@@ -106,6 +120,7 @@
     <div class="main">
         <div class="text">new</div>
         <div class="img"></div>
+        <div class="img2"></div>
         <div class="view">Quick View</div>
         <div class="iteminfo">
             <a href="">gabi full sleeve sweatshirt</a>
