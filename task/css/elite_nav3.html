@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .main3 {
+            height: 70px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: black;
+            color: white;
+        }
+
+        .data2 {
+            align-content: center;
+            text-transform: capitalize;
+            letter-spacing: 5px;
+            position: relative;
+            padding: 5px 10px;
+        }
+
+        .data2::after {
+            content: "";
+            height: 5px;
+            width: 100%;
+            background-color: aquamarine;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            transition: 1s;
+            transform: scale(0);
+        }
+
+        .data2:hover::after {
+            position: absolute;
+            left: 0%;
+            transform: scale(1);
+        }
+        .fa-cart-shopping{
+            background-color: aquamarine;
+            color: white;
+            font-size: 20px;
+            padding: 20px 40px;
+        }
+        .list{
+            list-style: none;
+            border: 2px solid wheat;
+            background-color: black;
+            padding: 0;
+            margin-top: 32px;
+        }
+        .option{
+            border: 2px solid wheat;
+            text-align: center;
+            padding: 10px;
+        }
+        #data2{
+            margin-top: 20px;
+        }
+        .data2:hover ul,li{
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main3">
+        <div class="data2">home</div>
+        <div class="data2">about</div>
+        <div class="data2" id="data2">mens's wear <i class="fa-solid fa-caret-down"></i>
+            <ul class="list">
+                <li class="option">watches</li>
+                <li class="option">clothes</li>
+                <li class="option">shoes</li>
+                <li class="option">accesories</li>
+            </ul></div>
+        <div class="data2">women's wear <i class="fa-solid fa-caret-down"></i></div>
+        <div class="data2">short codes <i class="fa-solid fa-caret-down"></i></div>
+        <div class="data2">contact</div>
+        <div class="data2"><i class="fa-solid fa-cart-shopping"></i></div>
+    </div>
+</body>
+
+</html>

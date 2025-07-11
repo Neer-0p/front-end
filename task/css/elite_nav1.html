@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            text-transform: capitalize;
+        }
+        .main{
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            color: aquamarine;
+        }
+        .data{
+            border-right: 2px solid white;
+            align-content: center;
+            padding-right: 40px;
+        }
+        .main1{
+                height: 90px;
+                display: flex;
+                justify-content: space-evenly;
+                background-color: white;
+            }
+            .middle{
+                align-content: center;
+            }
+            .fa-facebook-f{
+                background-color: rgb(31, 31, 171);
+                color: white;
+                padding: 10px;
+                font-size: 20px;
+            }
+            .fa-twitter{
+                background-color: skyblue;
+                color: white;
+                padding: 10px;
+                font-size: 20px;
+            }
+            .fa-instagram{
+                background-color: orange;
+                color: white;
+                padding: 10px;
+                font-size: 20px;
+            }
+            .fa-linkedin-in{
+                background-color: rgb(195, 48, 48);
+                color: white;
+                padding: 10px;
+                font-size: 20px;
+            }
+            .fa-magnifying-glass{
+                background-color: rgb(85, 249, 195);
+                color: white;
+                padding: 5px;
+                font-size: 30px;
+            }
+            .main3 {
+            height: 70px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: black;
+            color: white;
+        }
+
+        .data2 {
+            align-content: center;
+            text-transform: capitalize;
+            letter-spacing: 5px;
+            position: relative;
+            padding: 5px 10px;
+        }
+
+        .data2::after {
+            content: "";
+            height: 10px;
+            width: 100%;
+            background-color: aquamarine;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            transition: 1s;
+            transform: scale(0);
+        }
+
+        .data2:hover::after {
+            position: absolute;
+            left: 0%;
+            transform: scale(1);
+        }
+        .fa-cart-shopping{
+            background-color: aquamarine;
+            color: white;
+            font-size: 20px;
+            padding: 20px 40px;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    <div class="main">
+        <div class="data"><i class="fa-solid fa-lock"></i> sign in</div>
+        <div class="data"><i class="fa-solid fa-pen-to-square"></i> sign up</div>
+        <div class="data"><i class="fa-solid fa-phone"></i> call : 01234567890</div>
+        <div class="data"><i class="fa-solid fa-envelope"></i> info example.com</div>
+    </div>
+    <div class="main1">
+        <div class="middle">
+            <input type="search" placeholder="Search here..." style="font-size: 30px;">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="middle" style="letter-spacing: 5px;font-size: 30px;"><span style="background-color: black;color: white;padding: 10px;font-size: 40px;">E</span>lite shoppy</div>
+        <div class="middle" style="font-size: 20px;letter-spacing: 5px;">
+            share on : <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+    </div>
+    <div class="main3">
+        <div class="data2">home</div>
+        <div class="data2">about</div>
+        <div class="data2">mens's wear <i class="fa-solid fa-caret-down"></i></div>
+        <div class="data2">women's wear <i class="fa-solid fa-caret-down"></i></div>
+        <div class="data2">short codes <i class="fa-solid fa-caret-down"></i></div>
+        <div class="data2">contact</div>
+        <div class="data2"><i class="fa-solid fa-cart-shopping"></i></div>
+    </div>
+</body>
+</html>

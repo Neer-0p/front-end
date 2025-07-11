@@ -1,0 +1,49 @@
+.main {
+            border: 2px solid;
+        }
+
+        .header {
+            text-align: center;
+        }
+        .main{
+            width: 500px;
+            height: 600px;
+            margin: 50px auto;
+            border: 2px solid;
+            background-color: purple;
+            color: white;
+        }
+        #head{
+            text-align: center;
+            letter-spacing: 5px;
+        }
+        p{
+            text-align: center;
+        }
+        .tag{
+            margin-left: 20px;
+            padding: 5px;
+        }
+        .text{
+            margin-left: 20px;
+            padding: 10px;
+        }
+        .button{
+            text-align: center;
+            padding: 10px;
+            padding-top: 30px;
+        }
+        .button button{
+            background-color: pink;
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            transition: .5s;
+        }
+        .button:hover button{
+            background-color: green;
+            scale: 1.4;
+        }
