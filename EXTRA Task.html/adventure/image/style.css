@@ -1,0 +1,316 @@
+body {
+    background: url(/image/background\ img.png);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header-title {
+    font-size: clamp(20px, 8vw, 60px);
+    text-transform: uppercase;
+    color: transparent;
+    font-weight: 800;
+    font-family: "Barlow";
+    text-align: center;
+    margin: 0;
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+}
+
+.header-nav {
+    font-size: clamp(20px, 8vw, 70px);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    padding: 10px;
+    padding-bottom: 40px;
+}
+
+.container .fa-bars {
+    font-size: clamp(18px, 8vw, 50px);
+    color: white;
+    display: none;
+}
+.nav-ul {
+    list-style: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Barlow";
+    text-align: center;
+    margin-top: 50px;
+}
+
+.nav-ul .nav-li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.btn {
+
+    line-height: 100%;
+}
+
+.nav-btn {
+    background: transparent;
+    color: transparent;
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+    text-transform: uppercase;
+    padding: 5px 25px;
+    border: 2px solid white;
+    margin-top: 60px;
+    font-size: 18px;
+}
+
+.header-row {
+    margin-top: 20px;
+    display: flex;
+    padding: 10px;
+    column-gap: 30px;
+}
+
+.header-col1 {
+    width: 90%;
+}
+
+.img-header {
+    margin: 20px auto;
+    height: 80%;
+    width: 70%;
+}
+
+.header3,
+.header4,
+.header-p {
+    color: #ffffff;
+}
+
+.header3 {
+    color: transparent;
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+    text-transform: uppercase;
+    font-size: clamp(18px, 8vw, 50px);
+}
+
+.header4 {
+    font-size: clamp(18px, 8vw, 41px);
+    color: transparent;
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+    font-weight: 400;
+    font-family: "Yellowtail";
+}
+
+/* starting of sec 1 */
+.sec-1 {
+    height: 500px;
+    width: 100%;
+    background: url(/image/sec1\ img.png)rgba(0, 0, 0, 0.3);
+    background-size: 100% 100%;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sec-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.sec-col {
+    background: url();
+    width: 100%;
+    border: 4px solid white;
+    margin: 0 auto;
+}
+
+.sec1-logo {
+    text-align: center;
+    padding: 10px;
+}
+
+.sec-1-p {
+    font-size: clamp(18px, 6vw, 25px);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Barlow";
+    text-align: center;
+}
+
+.sec1-h1 {
+    /* opacity: 0.000; */
+    font-size: 50px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: "Barlow";
+    text-align: center;
+    border: 3px solid red;
+
+}
+
+/* end of sec1 */
+
+
+/* starting of sec 2 */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row2 {
+    color: white;
+    display: flex;
+    padding: 20px;
+}
+
+.col2 {
+    width: 50%;
+}
+
+.col2-img {
+    margin-top: 30px;
+}
+
+.textcol2 {
+    text-align: end;
+    margin: 35% auto;
+}
+
+.col2-h2 {
+    margin: 0;
+    font-size: clamp(18px, 6vw, 50px);
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+    font-weight: 500;
+    font-family: "Barlow";
+    text-align: right;
+}
+
+.col2-p {
+    font-size: clamp(18px, 6vw, 18px);
+    color: silver;
+    font-weight: 400;
+    font-family: "Barlow";
+    text-align: right;
+}
+
+.col2-btn .col2-a {
+    background: orange;
+    color: black;
+    text-decoration: none;
+    padding: 5px 90px;
+    text-transform: uppercase;
+}
+
+/* end of sec 2 */
+
+
+/* sec3 */
+.sec3 {
+    position: relative;
+}
+
+.sec3-img {
+    opacity: 0.3;
+}
+
+.sec3-text {
+    position: absolute;
+    bottom: 0;
+    right: 35%;
+    font-size: clam0(18px, 7vw, 44px);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Barlow";
+    text-align: center;
+    padding-bottom: 15%;
+    background: transparent;
+}
+.social{
+    width: 100%;
+    padding: 20px;
+}
+.fa-brands{
+    margin: 0px 10px;
+    padding: 10px 10px;
+    font-size: 30px;
+}
+.fa-instagram{
+    color: white;
+    background: linear-gradient(purple, blue, red, yellow);
+    border-radius: 50%;
+    transition: .6s;
+}
+.fa-instagram:hover{
+    scale: 1.2;
+}
+.fa-facebook{
+    background: white;
+    color: blue;
+    border-radius: 50%;
+    transition: .6s;
+}
+.fa-facebook:hover{
+    scale: 1.4;
+    background: transparent;
+}
+.fa-x-twitter{
+    background: linear-gradient(grey,black);
+    border-radius: 50%;
+    transition: .6s;
+}
+.fa-x-twitter:hover{
+    scale: 1.4;
+    background: transparent;
+}
+.fa-whatsapp{
+    background: white;
+    color: green;
+    border-radius: 50%;
+    transition: .6s;
+}
+.fa-whatsapp:hover{
+    scale: 1.4;
+    background: transparent;
+}
+.sec3-h3 {
+    font-size: clamp(18px, 5vw, 44px);
+    color: transparent;
+    margin: 0;
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+    font-weight: 200;
+}
+
+.sec3-h1 {
+    font-size: clamp(44px, 10vw, 80px);
+    color: transparent;
+    margin: 0;
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+    font-weight: 900;
+}
+
+.sec3-h4 {
+    font-size: clamp(18px, 5vw, 40px);
+    color: transparent;
+    font-weight: 400;
+    font-family: "Yellowtail";
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+}
+/* sec4 */
+
