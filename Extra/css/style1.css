@@ -1,0 +1,493 @@
+body {
+    background: url(/Extra/image/background\ img.png);
+}
+
+/* header */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header-title {
+    font-size: clamp(20px, 8vw, 60px);
+    text-transform: uppercase;
+    color: transparent;
+    font-weight: 800;
+    font-family: "Barlow";
+    text-align: center;
+    margin: 0;
+    background: linear-gradient(to right, silver, orangered);
+    background-clip: text;
+}
+
+.header-nav {
+    font-size: clamp(20px, 8vw, 70px);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    padding: 10px;
+    padding-bottom: 40px;
+}
+
+.container .fa-bars {
+    font-size: clamp(18px, 8vw, 50px);
+    color: white;
+    display: none;
+}
+
+.nav-ul {
+    list-style: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Barlow";
+    text-align: center;
+    margin-top: 50px;
+}
+
+.nav-ul .nav-li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.nav-btn {
+    background: transparent;
+    color: transparent;
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+    text-transform: uppercase;
+    padding: 5px 25px;
+    border: 2px solid white;
+    margin-top: 60px;
+    font-size: 18px;
+}
+
+.header-row {
+    margin-top: 20px;
+    display: flex;
+    padding: 10px;
+    column-gap: 30px;
+}
+
+.header-col1 {
+    width: 90%;
+}
+
+.img-header {
+    margin: 20px auto;
+    height: 80%;
+    width: 70%;
+}
+
+.header3,
+.header4,
+.header-p {
+    color: #ffffff;
+}
+
+.header3 {
+    color: transparent;
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+    text-transform: uppercase;
+    font-size: clamp(18px, 8vw, 50px);
+}
+
+.header4 {
+    font-size: clamp(18px, 8vw, 41px);
+    color: transparent;
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+    font-weight: 400;
+    font-family: "Yellowtail";
+}
+
+/* starting of sec 1 */
+.sec-1 {
+    position: relative;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sec1-img {
+    opacity: 0.4;
+}
+
+.sec1-row {
+    font-size: clamp(18px, 6vw, 33px);
+    position: absolute;
+    top: 30%;
+    right: 50%;
+    text-align: left;
+}
+
+.sec1-text {
+    font-size: clamp(12px, 6vw, 33px);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Barlow";
+    position: absolute;
+    right: -60%;
+}
+
+.sec1-h4 {
+    margin: 0;
+    color: transparent;
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+}
+
+.sec1-text .sec1-h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    color: transparent;
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+}
+
+
+/* end of sec1 */
+
+
+/* starting of sec 2 */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row2 {
+    color: white;
+    display: flex;
+    padding: 20px;
+}
+
+.col2 {
+    width: 50%;
+}
+
+.col2-img {
+    margin-top: 30px;
+}
+
+.textcol2 {
+    text-align: end;
+    margin: 35% auto;
+}
+
+.col2-h2 {
+    margin: 0;
+    font-size: clamp(18px, 6vw, 50px);
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+    font-weight: 500;
+    font-family: "Barlow";
+    text-align: right;
+}
+
+.col2-p {
+    font-size: clamp(18px, 6vw, 18px);
+    color: silver;
+    font-weight: 400;
+    font-family: "Barlow";
+    text-align: right;
+}
+
+.col2-btn .sec2-btn {
+    background: orange;
+    color: black;
+    text-decoration: none;
+    padding: 5px 90px;
+    text-transform: uppercase;
+    border: none;
+}
+
+/* end of sec 2 */
+
+
+/* sec3 */
+.sec3 {
+    position: relative;
+}
+
+.sec3-img {
+    opacity: 0.3;
+}
+
+.sec3-text {
+    position: absolute;
+    top: 0;
+    right: 35%;
+    font-size: clam0(18px, 7vw, 44px);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Barlow";
+    text-align: center;
+    padding-bottom: 15%;
+    background: transparent;
+}
+
+
+
+.sec3-h3 {
+    font-size: clamp(18px, 5vw, 44px);
+    color: transparent;
+    margin: 0;
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+    font-weight: 200;
+}
+
+.sec3-h1 {
+    font-size: clamp(44px, 10vw, 80px);
+    color: transparent;
+    margin: 0;
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+    font-weight: 900;
+}
+
+.sec3-h4 {
+    font-size: clamp(18px, 5vw, 40px);
+    color: transparent;
+    font-weight: 400;
+    font-family: "Yellowtail";
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+}
+
+/* sec4 */
+.sec4 {
+    /* height: 500px; */
+    background: url(/Extra/image/sec4\ img.png);
+    background-size: 100% 100%;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sec4-row {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid white; */
+}
+
+.sec4-text {
+    padding: 0px 80px;
+}
+
+.sec4-h1 {
+    width: 40%;
+    font-size: clamp(15px, 5vw, 70px);
+    text-transform: uppercase;
+    color: transparent;
+    font-weight: 800;
+    font-family: "Barlow";
+    background: linear-gradient(to left, orangered, silver, orangered);
+    background-clip: text;
+}
+
+.sec4-p {
+    width: 50%;
+    font-size: clamp(12px, 5vw, 15px);
+    color: transparent;
+    background: linear-gradient(to right, white, white, orangered);
+    background-clip: text;
+    font-weight: 400;
+    font-family: "Barlow";
+}
+
+.sec4-col {
+    margin: 40px 0px;
+    /* border: 2px solid white; */
+}
+
+.sec4-col-h1 {
+    padding: 0px 80px;
+    margin: 0;
+    font-size: clamp(15px, 8vw, 33px);
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(to left, white, white, orangered);
+    background-clip: text;
+    font-weight: 500;
+    font-family: "Barlow";
+}
+
+.table-sec4 {
+    margin: 10px 80px;
+    /* border: 2px solid orangered; */
+    display: inline;
+    padding: 5px 10px;
+}
+
+.wrap {
+    display: flex;
+}
+
+.internal-col {
+    width: 50%;
+    /* border: 2px solid white; */
+}
+
+table {
+    margin: 0px 40px;
+    /* border: 2px solid red; */
+}
+
+.dark {
+    color: transparent;
+    background: linear-gradient(to right, orangered, white, white);
+    background-clip: text;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+button {
+    color: transparent;
+    background: linear-gradient(to right, orangered, white, white);
+    background-clip: text;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+/* sec 5 */
+
+.sec5 {
+    height: 500px;
+    background: url(/Extra/image/sec5\ img.png);
+    background-size: 100% 100%;
+    padding: 10px;
+}
+
+.sec5-text {
+    margin: 100px auto;
+    width: 50%;
+    font-size: clamp(15px, 8vw, 80px);
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(orangered, white, orangered);
+    background-clip: text;
+    font-weight: 800;
+    font-family: "Barlow";
+    text-align: center;
+}
+
+/* sec6 */
+
+.sec6 {
+    background: red;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sec6-row {
+    display: flex;
+    column-gap: 10px;
+}
+
+.sec6-col {
+    width: 33.33%;
+}
+
+.sec6-ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sec6-ul .sec6-li {
+    padding: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Barlow";
+}
+
+.sec6-h3 {
+    margin: 0px;
+    text-align: center;
+    font-size: clamp(18px, 5vw, 40px);
+    text-transform: capitalize;
+    color: transparent;
+    font-weight: 400;
+    font-family: "Yellowtail";
+    background: linear-gradient(orangered, silver, orangered);
+    background-clip: text;
+}
+
+.sec6-h1 {
+    margin: 0px;
+    text-align: center;
+    font-size: clamp(15px, 6vw, 80px);
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(orangered, white, orangered);
+    background-clip: text;
+    font-weight: 800;
+    font-family: "Barlow";
+}
+
+.sec6-logo {
+    margin: 20px auto;
+    height: 100px;
+    width: 100px;
+}
+
+.sec6-text {
+    text-align: right;
+}
+
+.sec6-h2 {
+    font-size: clamp(15px, 4vw, 33px);
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(to left, orangered, white, orangered);
+    background-clip: text;
+    font-weight: 500;
+    font-family: "Barlow";
+}
+
+.sec6-label {
+    color: transparent;
+    background: linear-gradient(to left, orangered, white);
+    background-clip: text;
+}
+
+
+.BTN6 {
+    margin: 0 165px;
+    margin-top: 10px;
+    width: 50%;
+    text-align: center;
+    background: white;
+}
+
+.sec6-a {
+    text-decoration: none;
+    color: black;
+    background: white;
+    text-align: center;
+}
+
+.sec6-p {
+    font-size: clamp(5px, 2vw, 20px);
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Barlow";
+    text-align: right;
+}
+
