@@ -1,0 +1,38 @@
+body{
+    background: black;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 400px;
+    gap: 20px;
+}
+
+.box{
+    padding: 10px 0;
+    position: relative;
+    transition: .5s;
+}
+.box:hover{
+    transform: scale(0.8);
+}
+
+.card1-img{
+    position: absolute;
+    top: 0;
+}
+.card1-text{
+    position: absolute;
+    bottom: 0;
+    background: white;
+    color: black;
+    text-transform: capitalize;
+    width: 100%;
+    text-align: center;
+}
+
+.card1-text:hover {
+    background: black;
+    color: white;
+}

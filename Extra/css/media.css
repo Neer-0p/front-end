@@ -147,7 +147,18 @@
 
     .sec6-ul .sec6-li {
         padding: 10px;
-        font-size: 12px;
+        font-size: 10px;
+        display: inline;
+    }
+    .sec6-row{
+        display: flex;
+        flex-direction: column;
+    }
+    .sec6-col{
+        width: 100%;
+    }
+    .sec6-text{
+        text-align: center ;
     }
 }
 
