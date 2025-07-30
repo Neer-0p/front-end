@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA</title>
+</head>
+<body>
+    <script>
+        // matrix=5x5 right side high to low
+        // for(r=1;r<=5;r++){
+        //     for(c=1;c<=r;c++){
+        //         document.write("&nbsp;&nbsp;")
+        //     }
+        //     for(c=5;c>=r;c--){
+        //         document.write("*")
+        //     }
+        //     document.write("<br>")
+        // }
+
+        // matrix=5x5 left side low to high 
+        // for(r=1;r<=5;r++){
+        //     for(c=1;c<=r;c++){
+        //         document.write("*")
+        //     }
+        //     document.write("<br>")
+        // }
+
+        // matrix=5x5 left side high to low
+        // for(r=1;r<=5;r++){
+        //     for(c=5;c>=r;c--){
+        //         document.write("*")
+        //     }
+        //     document.write("<br>")
+        // }
+
+        // matrix=5x5 center low to high
+        // for(r=1;r<=5;r++){
+        //     for(c=5;c>=r;c--){
+        //         document.write("&nbsp;")
+        //     }
+        //     for(c=1;c<=r;c++){
+        //         document.write("*")
+        //     }
+        //     document.write("<br>")
+        // }
+
+        // matrix=5x5 center high to low
+        // for(r=1;r<=5;r++){
+        //     for(c=1;c<=r;c++){
+        //         document.write("&nbsp;")
+        //     }
+        //     for(c=5;c>=r;c--){
+        //         document.write("*")
+        //     }
+        //     document.write("<br>")
+        // }
+
+        // matrix=5x5 right side low to high
+        for(r=1;r<=5;r++){
+            for(c=5;c>=r;c--){
+                document.write("&nbsp;&nbsp;")
+            }
+            for(c=1;c<=r;c++){
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+
+
+    </script>
+</body>
+</html>
