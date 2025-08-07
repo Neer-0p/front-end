@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB_6</title>
+</head>
+<body>
+    <input type="text" id="inp" placeholder="Enter your name">
+    <button onclick="greetuser()">Greet me</button>
+    <p id="result"></p>
+
+    <h1>Task-2</h1>
+    <input type="text" id="inp1">
+    <input type="text" id="inp2">
+    <button onclick="calculateSum()">add</button>
+    <p id="output"></p>
+    <script>
+        function greetuser(){
+            let name = document.getElementById("inp").value
+
+            if(name.trim() === ""){
+                document.getElementById("result").innerHTML = "Enter a valid name" 
+            }
+            else{
+                document.getElementById("result").innerHTML = "Hello, " + name + "!";
+            }
+        }
+
+        function calculateSum(){
+            let number = document.getElementById("inp1")
+            let number2 = document.getElementById("inp2")
+
+            let sum = parseFloat(number.value) + parseFloat(number2.value)
+            document.getElementById("output").innerHTML = "Ans: " + sum
+        }    
+    </script>
+</body>
+</html>

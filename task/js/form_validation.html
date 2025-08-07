@@ -213,7 +213,7 @@
                 <td><input type="password" id="rpwd"></td>
             <tr>
             <tr>
-                <td><button type="submit" id="btn" class="main-btn" onclick="effect2()" ondblclick="effect()">
+                <td><button type="submit" id="btn" class="main-btn">
                         sign up
                         <span></span>
                     </button></td>
@@ -255,7 +255,7 @@
             let hasError = false;
 
             // name
-            if (nm === "") {
+            if (nm == "") {
                 nmerr.innerHTML = "Enter your name"
                 nmerr.style.color = "red"
                 hasError = true
@@ -295,7 +295,7 @@
                 hasError = true
             }
             // pass
-            if (pwd === "") {
+            if (pwd == "") {
                 pwderr.innerHTML = "Password is required";
                 pwderr.style.color = "red"
                 hasError = true;

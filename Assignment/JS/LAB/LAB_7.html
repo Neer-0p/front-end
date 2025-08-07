@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB_7</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+
+        let fruits = ["apple", "banana", "cherry"]
+        fruits.push("orange") //add an data in array
+        fruits.shift() // remove first data in array
+        console.log(fruits)
+
+        console.log("Task-2")
+        let numbers = [10,20,30,40,50]
+        document.write(numbers)
+        let sum = 0
+        for(let i = 0;i<numbers.length;i++){
+            sum += numbers[i]
+        }
+        document.getElementById("result").innerHTML = "Sum of the arr: " + sum
+
+    </script>
+</body>
+</html>
