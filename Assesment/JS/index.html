@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo_list</title>
+    <style>
+        .main{
+            border: 2px solid;
+            padding: 20px;
+            width: 20%;
+            margin: 100px auto;
+            background: black;
+            color: white;
+        }
+        li{
+            background: white;
+            color: black;
+            border: 2px solid;
+            list-style: none;
+            padding: 5px 10px;
+        }
+        ul{
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="text" id="inp"> <button id="addbtn">Add todo</button>
+        <ul id="todolist">
+            <li>Read a book</li>
+            <li>Luch with caro</li>
+            <li>Feed the dog</li>
+        </ul>
+    </div>
+
+    <script>
+        let input = document.getElementById("inp")
+        let todolist = document.getElementById("todolist")
+        let addbtn = document.getElementById("addbtn")
+
+        addbtn.addEventListener("click",function(){
+            let newtodo = input.value
+
+            if(newtodo !== ""){
+                let li = document.createElement("li")
+                li.textContent = newtodo
+
+                todolist.appendChild(li)
+                input.value = ""
+            }
+            else{
+                alert("Please ebter todo before adding")
+            }
+        })
+
+    </script>
+</body>
+</html>

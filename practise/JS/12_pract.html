@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prac_1</title>
+</head>
+<body>
+    <div class="main">
+        <input type="text" id="inp" onkeyup="data()">
+        <textarea id="display" disabled></textarea>
+        <button>display</button>
+    </div>
+
+    <script>
+
+        let nam_tag = document.getElementById("inp")
+        let display = document.getElementById("display")
+
+        function data(){
+            display.innerHTML = nam_tag.value
+        }
+
+    </script>
+</body>
+</html>
