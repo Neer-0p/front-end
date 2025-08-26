@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Bank {
+            // member fun
+            display = function details(pin, balance) {
+                // data member
+                let bankname = "HDFC"
+                let IFSC = "HD0001"
+
+                console.log("Bank Name :", bankname)
+                console.log("ISFC Code :", IFSC)
+                console.log("PIN :", pin)
+                console.log("Bank balance :", balance)
+            }
+
+            // deposit fun
+            deposit = function add(balance, amount) {
+                if (amount > 0) {
+                    balance = balance + amount
+                    console.log("Deposit :" + amount + " | New balance :" + balance)
+                }
+                else {
+                    console.log("Invalid deposit amount")
+                }
+                return balance
+            }
+
+            // withdraw fun
+            withdraw = function cut(balance, amount) {
+                if (amount <= 0) {
+                    console.log("Invalid withdrwal amount")
+                }
+                else if (amount > balance) {
+                    console.log("Insufficient balance! Current balance :", balance)
+                }
+                else {
+                    balance = balance - amount;
+                    console.log("Withdrawal :" + amount + " | New Balance :" + balance)
+                }
+                return balance
+            }
+        }
+
+        let user1 = new Bank
+        let balance = 1000
+        console.log("---Initial details---")
+        user1.display(1234,balance)
+
+        console.log("---Deposit 2000---")
+        balance = user1.deposit(balance,2000)
+
+        console.log("---Withdrwal 500---")
+        balance = user1.withdraw(balance,500)
+
+    </script>
+
+</body>
+
+</html>
