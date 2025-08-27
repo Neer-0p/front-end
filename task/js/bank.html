@@ -28,7 +28,8 @@
             deposit = function add(balance, amount) {
                 if (amount > 0) {
                     balance = balance + amount
-                    console.log("Deposit :" + amount + " | New balance :" + balance)
+                    console.log("Deposit :",amount) 
+                    console.log("New balance :",balance)
                 }
                 else {
                     console.log("Invalid deposit amount")
@@ -46,10 +47,12 @@
                 }
                 else {
                     balance = balance - amount;
-                    console.log("Withdrawal :" + amount + " | New Balance :" + balance)
+                    console.log("Withdrawal :",amount) 
+                    console.log("New balance :",balance)
                 }
                 return balance
             }
+
         }
 
         let user1 = new Bank
