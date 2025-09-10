@@ -24,32 +24,33 @@
         fetch("https://dummyjson.com/carts", {
             method: "GET"
         })
-            .then((res) => 
-             res.json()
-            )
+            .then((res) => { 
+             return res.json()
+            })
             .then((res) => {
-                let card = res.carts.map((cart) => {
+                console.log(res)
+                let card = res.carts.map((user,index) => {
                     // loop through products
-                    let productList = cart.products.map((p) => {
+                    let productList = user.products.map((product) => {
                         return `
-                        <li>
-                            ${p.title} (x${p.quantity}) - $${p.price} each 
-                            <strong>Total: $${p.total}</strong>
+                        <li class="list-group-item">
+                            ${product.title} <span class="badge text-bg-primary rounded-pill">(x${product.quantity})</span> : $${product.price}(each) 
+                            <h5>Total: $${product.total}</h5>
                         </li>
                             `;
                     }).join("");
 
                     return `
                             <div class="col-md-4">
-                                <div class="card" style="width: 18rem;">
+                                <div class="card h-100" style="width: 100%">
                                 <div class="card-body">
-                                <h5 class="card-title">Cart ID : ${cart.id}</h5>
+                                <h5 class="card-title">Cart ID : ${user.id}</h5>
                                 <ul>${productList}</ul>
-                                <p><strong>Total Products:</strong> ${cart.totalProducts}</p>
-                                <p><strong>Total Quantity:</strong> ${cart.totalQuantity}</p>
-                                <p><strong>Discount:</strong> $${cart.discountedTotal}</p>
-                                <p><strong>Total:</strong> $${cart.total}</p>
-                                <p><strong>User ID:</strong> ${cart.userId}</p>
+                                <h6>Total Products: ${user.totalProducts}</h6>
+                                <h6>Total Quantity: ${user.totalQuantity}</h6>
+                                <h6>Discount: $${user.discountedTotal}</h6>
+                                <h6>Total: $${user.total}</h6>
+                                <h6>User ID: ${user.userId}</h6>
                                 <a href="#" class="btn btn-primary">Buy</a>
                             </div>   
                             </div>
