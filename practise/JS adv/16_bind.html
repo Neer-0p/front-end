@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let data = {
+            fullname: function details(city,state) {
+                console.log("firstname =>", this.firstname, " lastname =>", this.lastname,"city =>",city,"state =>",state)
+            }
+        }
+
+        let person = {
+            firstname: "het",
+            lastname: "patel"
+        }
+
+        let newdata =  data.fullname.bind(person,"amdavad","gujarat")
+        newdata()
+
+    </script>
+</body>
+
+</html>

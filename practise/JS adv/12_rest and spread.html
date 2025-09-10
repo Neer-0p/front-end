@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ...rest :- to store a data (fun as a parameter) -->
+     <!-- ...spread :- to store a data (arr and obj store) -->
+
+     <script>
+
+        // rest
+        function sum(...neer){
+            let sum = 0
+            for(let nir in neer){
+                sum = sum + neer[nir]
+            }
+            return sum
+        }
+        console.log(sum(1,2,3,4,5))
+
+        // spread
+        let arr = [1,2,3,4,5]
+        let arr1 = [6,7,8,9]
+
+        let array = [...arr,...arr1]
+        console.log(array)
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promises Example</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .output { margin-top: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 6px; }
+  </style>
+</head>
+<body>
+    <!-- promise :- res,rej fun  -->
+
+    <!-- there are three states
+        1) pending = hold
+        2) fulfilled = completed view
+        3) rejected -->
+
+    <!-- promise : it is an simple object -->
+    <!-- syntax : -
+        let data = new Promise(function(res,rej){
+            logic
+        }) -->
+  <h1>JavaScript Promises Demo</h1>
+  <button onclick="runTasks()">Run Promise Tasks</button>
+
+  <div id="results"></div>
+
+  <script>
+    // Utility function to print to the page
+    function print(msg) {
+      const div = document.createElement("div");
+      div.className = "output";
+      div.textContent = msg;
+      document.getElementById("results").appendChild(div);
+    }
+
+    function runTasks() {
+      document.getElementById("results").innerHTML = ""; // clear old results
+
+      // Task 1: Basic Promise
+      let task1 = new Promise((resolve) => {
+        setTimeout(() => resolve("Task 1: Hello from Promise ✅"), 3000);
+      });
+      task1.then(msg => print(msg));
+
+      // Task 2: Reject a Promise
+      let task2 = new Promise((resolve, reject) => {
+        setTimeout(() => reject("Task 2: API request failed ❌"), 2000);
+      });
+      task2.catch(err => print(err));
+    }
+  </script>
+</body>
+</html>
