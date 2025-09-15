@@ -16,26 +16,32 @@
             <div class="col-md-6">
                 <label for="" class="form-label">Full Name</label>
                 <input type="text" class="form-control" placeholder="Enter your Full Name" id="nm">
+                <div id="nm-error" class="text-danger fs-6"></div>
             </div>
             <div class="col-md-6">
                 <label for="" class="form-label">Phone Number</label>
-                <input type="number" class="form-control" placeholder="Enter your Mobile number" id="mb">
+                <input type="number" class="form-control phone" placeholder="Enter your Mobile number" id="mb">
+                <div id="mb-error" class="text-danger fs-6"></div>
             </div>
             <div class="col-md-6">
                 <label for="" class="form-label">Email</label>
-                <input type="email" class="form-control" placeholder="Enter your Email" id="em">
+                <input type="email" class="form-control email" placeholder="Enter your Email" id="em">
+                <div id="em-error" class="text-danger fs-6"></div>
             </div>
             <div class="col-md-6">
                 <label for="" class="form-label">Address</label>
-                <input type="text" class="form-control" placeholder="1234 Main St" id="addr">
+                <input type="text" class="form-control address" placeholder="1234 Main St" id="addr">
+                <div id="addr-error" class="text-danger fs-6"></div>
             </div>
             <div class="col-md-6">
                 <label for="" class="form-label">Aadhar Number</label>
-                <input type="number" class="form-control" placeholder="1234 5678 1234" id="an">
+                <input type="number" class="form-control adhar" placeholder="1234 5678 1234" id="an">
+                <div id="an-error" class="text-danger fs-6"></div>
             </div>
             <div class="col-md-6">
                 <label for="" class="form-label">Purpose of Visit</label>
-                <input type="text" class="form-control" id="pv">
+                <input type="text" class="form-control visit" id="pv">
+                <div id="visit-error" class="text-danger fs-6"></div>
             </div>
             <div class="col-md-6">
                 <label for="" class="form-label">Check-in-Date :</label>
@@ -55,7 +61,7 @@
                 <label for="" class="form-label">Number of Children</label>
                 <input type="number" class="form-control">
             </div>
-            <div class="col-12">
+            <div class="col-12 search">
                 <button type="submit" class="btn btn-primary">SAVE</button>
             </div>
         </form>
@@ -66,10 +72,10 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>NAME</th>
-                <th>PHONE</th>
-                <th>EMAIL</th>
-                <th>AADHAR</th>
+                <th class="fnm">NAME</th>
+                <th class="mobile">PHONE</th>
+                <th class="emaill">EMAIL</th>
+                <th class="aadhar">AADHAR</th>
             </tr>
         </thead>
         <tbody>
@@ -79,34 +85,30 @@
 
     <script>
 
-        fetch ("https://jsonplaceholder.typicode.com/users",{
-            method : "GET"
-        })
-        .then((res) =>{
-            return res.json()
-        })
-        .then((data) => {
-            console.log(data)
-            data.forEach((user,index) => {
-                let body = document.querySelector("tbody")
-                let row = body.insertRow()
+        function values() {
+                let tbody = document.querySelector("tbody")
+                // tbody_row insterrow
+                let trow = tbody.insertRow();
+                // trow_col insertcell(number)
 
-                let idcell = row.insertCell(0)
-                let namecell = row.insertCell(1)
-                let phonecell = row.insertCell(2)
-                let emailcell = row.insertCell(3)
-                let aadharcell = row.insertCell(4)
+                let idcell = trow.insertCell(0)
+                let namecell = trow.insertCell(1)
+                let phonecell =trow.insertCell(2)
+                let emailcell =trow.insertCell(3)
+                let aadharcell = trow.insertCell(4)
 
-                idcell.textContent = user.id 
-                namecell.textContent = user.name
-                phonecell.textContent = user.phone 
-                emailcell.textContent = user.email 
-                aadharcell.textContent = user.address.zipcode
-            });
-        })
+                // textcontent
+                idcell.textContent = tbody.rows.length;
+
+                namecell.textContent = document.getElementById("nm").value
+                emailcell.textContent = document.getElementById("em").value
+                phonecell.textContent = document.getElementById("mb").value
+                aadharcell.textContent = document.getElementById("an").value
+            }
 
         document.getElementById("form").onsubmit = function (event) {
             event.preventDefault()
+
             // get values
             let nm = document.getElementById("nm")
             let mb = document.getElementById("mb")
@@ -116,17 +118,30 @@
             let pv = document.getElementById("pv")
             let cin = document.getElementById("cin")
             let cout = document.getElementById("cout")
-
+            
             // error fields
             let cinErr = document.getElementById("cin-error")
             let coutErr = document.getElementById("cout-error")
+            let nmErr = document.getElementById("nm-error")
+            let mbErr = document.getElementById("mb-error")
+            let emErr = document.getElementById("em-error")
+            let addrErr = document.getElementById("addr-error")
+            let anErr = document.getElementById("an-error")
+            let visitErr = document.getElementById("visit-error")
 
             // clear errors 
-            cinErr.innerText = "";
-            coutErr.innerText = "";
+            cinErr.innerText = ""
+            coutErr.innerText = ""
+            nmErr.innerText = ""
+            mbErr.innerText = ""
+            emErr.innerText = ""
+            addr.innerText = ""
+            anErr.innerText = ""
+            visitErr.innerText = ""
 
-            cin.classList.remove("error");
-            cout.classList.remove("error");
+
+            cin.classList.remove("error")
+            cout.classList.remove("error")
 
             // patterns
             let namePattern = /^[A-Za-z\s]+$/
@@ -138,79 +153,63 @@
 
             // fullname
             if (nm.value === "") {
-                nm.value = ""
-                nm.placeholder = "Name is required"
-                nm.classList.add("error")
+                nmErr.innerHTML = "Name must be required"
+                nmErr.style.color = "red"
                 hasError = true
             }
             else if (!namePattern.test(nm.value)) {
                 nm.value = ""
-                nm.placeholder = "Only letters allowed"
-                nm.classList.add("error")
+                nmErr.innerHTML = "Only letters are allowed"
+                nmErr.style.color = "red"
                 hasError = true
             }
 
             // mobile number
             if (mb.value === "") {
-                mb.value = ""
-                mb.placeholder = "Number is requried"
-                mb.classList.add("error")
+                mbErr.innerHTML = "Mobile number must be required"
+                mbErr.style.color = "red"
                 hasError = true
             }
             else if (!mobilePattern.test(mb.value)) {
-                mb.value = ""
-                mb.placeholder = "Only numbers are allowed"
-                mb.classList.add("error")
+                mbErr.innerHTML = "Only number are allowed"
+                mbErr.style.color = "red"
                 hasError = true
             }
 
             // email
             if (em.value === "") {
-                em.value = ""
-                em.placeholder = "Email required"
-                em.classList.add("error")
+                emErr.innerHTML = "Email required"
+                emErr.style.color = "red"
                 hasError = true
             }
             else if (!emailPattern.test(em.value)) {
-                em.value = ""
-                em.placeholder = "xyz@gmail.com"
-                em.classList.add("error")
+                emErr.innerHTML = "Must follow pattern"
                 hasError = true
             }
 
             // address 
             if (addr.value === "") {
-                addr.value = ""
-                addr.placeholder = "Address is required"
-                addr.classList.add("error")
+                addrErr.innerHTML = "Address must be required"
+                addrErr.style.color = "red"
                 hasError = true
             }
 
             // aadhar number
             if (an.value === "") {
-                an.value = ""
-                an.placeholder = "Aadhar number required"
-                an.classList.add("error")
+                anErr.innerHTML = "Aadhar must be required"
+                anErr.style.color = "red"
                 hasError = true
             }
             else if (!aadharPattern.test(an.value)) {
-                an.value = ""
-                an.placeholder = "Only numbers are allowed"
-                an.classList.add("error")
+                anErr.innerHTML = "Only numbers allowed"
+                anErr.style.color = "red"
                 hasError = true
             }
 
             // purpose of visit
             if (pv.value === "") {
-                pv.value = ""
-                pv.placeholder = "Must be field"
-                pv.classList.add("error")
-                hasError = true
-            }
-            else if (!namePattern.test(pv.value)) {
-                pv.value = ""
-                pv.placeholder = "Only letters are allowed"
-                pv.classList.add("error")
+                visitErr.innerHTML = "Feedback must be required"
+                visitErr.style.color = "red"
                 hasError = true
             }
 
@@ -233,8 +232,9 @@
 
 
             if (!hasError) {
+                values()
                 alert("Form submitted successfully!")
-                document.getElementById("form").reset()
+                document.getElementById("form").reset();
             }
         }
 
