@@ -1,5 +1,8 @@
 import React from "react";
-import Statetask from "./task/Statetask";
+import Funarray from "./State/Funarray";
+// import Statetask from "./task/Statetask";
+// import FunState from "./State/FunState";
+// import Funobj from "./State/Funobj";
 // import ClassProps from "./Props/ClassProps";
 // import FunProps from "./Props/FunProps";
 // import MainProps from "./Props/MainProps";
@@ -21,7 +24,10 @@ function App() {
     // <MainProps/>
     // <ClassState/>
 
-    <Statetask/>
+    // <Statetask/>
+    // <FunState />
+    // <Funobj />
+    <Funarray />
 
 
   );
