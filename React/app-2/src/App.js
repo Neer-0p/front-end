@@ -1,5 +1,8 @@
 import React from "react";
-import Funarray from "./State/Funarray";
+// import Form from "./form/Form";
+// import Formobj from "./form/Formobj";
+import Pform from "./form/Pform";
+// import Funarray from "./State/Funarray";
 // import Statetask from "./task/Statetask";
 // import FunState from "./State/FunState";
 // import Funobj from "./State/Funobj";
@@ -27,8 +30,10 @@ function App() {
     // <Statetask/>
     // <FunState />
     // <Funobj />
-    <Funarray />
-
+    // <Funarray />
+    // <Form />
+    // <Formobj />
+    <Pform />
 
   );
 }
