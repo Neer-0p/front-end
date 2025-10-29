@@ -1,6 +1,19 @@
 import React from "react";
+// import Design from "./Mdb/Design";
+// import Header from "./Router/Commonpages/Header";
+// import Footer from "./Router/Commonpages/Footer";
+import Home from "./Router/Pages/Home";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import About from "./Router/Pages/About";
+import Contact from "./Router/Pages/Contact";
+import About1 from "./Router/Pages/About1";
+import About2 from "./Router/Pages/About2";
 // import Cardcompany from "./UseEffect/Cardcompany";
-import Cardusers from "./UseEffect/Cardusers";
+// import Cardusers from "./UseEffect/Cardusers";
+// import Axiospract from "./UseEffect/Axiospract";
+// import Axiosphoto from "./UseEffect/Axiosphoto";
+// import Fetchuse from "./UseEffect/Fetchuse";
+// import Fetchpract from "./UseEffect/Fetchpract";
 // import Cardcart from "./UseEffect/Cardcart";
 // import Cardaxios from "./UseEffect/Cardaxios";
 // import Axioscart from "./UseEffect/Axioscart";
@@ -29,7 +42,7 @@ import Cardusers from "./UseEffect/Cardusers";
 
 function App() {
   return (
-      
+
     /* // components */
     /* // <ClassCompo/> */
     /* // <FunCompo/> */
@@ -60,7 +73,26 @@ function App() {
     /* // <Cardaxios /> */
     /* // <Cardcart /> */
     // <Cardcompany />
-    <Cardusers />
+    // <Cardusers />
+    // <Axiospract />
+    // <Axiosphoto />
+    // <Fetchuse />
+    // <Fetchpract />
+    // <Design />
+    // <Header />
+    // <Footer />
+    // <Home />
+    <BrowserRouter>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="about1" element={<About1 />} />
+        <Route path="about2" element={<About2 />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 
