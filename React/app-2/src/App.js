@@ -2,12 +2,22 @@ import React from "react";
 // import Design from "./Mdb/Design";
 // import Header from "./Router/Commonpages/Header";
 // import Footer from "./Router/Commonpages/Footer";
-import Home from "./Router/Pages/Home";
+// import Home from "./Router/Pages/Home";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
-import About from "./Router/Pages/About";
-import Contact from "./Router/Pages/Contact";
-import About1 from "./Router/Pages/About1";
-import About2 from "./Router/Pages/About2";
+// import About from "./Router/Pages/About";
+// import Contact from "./Router/Pages/Contact";
+// import About1 from "./Router/Pages/About1";
+// import About2 from "./Router/Pages/About2";
+// import Error from "./Router/Pages/Error";
+import Header from "./Layout/Common/Header";
+import Footer from "./Layout/Common/Footer";
+import Home from "./Layout/Pages/Home";
+import About from "./Layout/Pages/About";
+import Contact from "./Layout/Pages/Contact";
+import Help from "./Layout/Pages/Help";
+import About1 from "./Layout/Pages/About1";
+import About2 from "./Layout/Pages/About2";
+import Notfound from "./Layout/Pages/Notfound";
 // import Cardcompany from "./UseEffect/Cardcompany";
 // import Cardusers from "./UseEffect/Cardusers";
 // import Axiospract from "./UseEffect/Axiospract";
@@ -84,12 +94,38 @@ function App() {
     // <Home />
     <BrowserRouter>
 
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="about1" element={<About1 />} />
-        <Route path="about2" element={<About2 />} />
+        <Route path="/about" element={<About />}>
+          <Route path="about1" element={<About1 />} />
+          <Route path="about2" element={<About2 />} />
+        </Route>
         <Route path="/contact" element={<Contact />} />
+        
+        {/* not found */}
+        {/* <Route path="*" element={<Error />} />
+      </Routes> */} 
+
+
+          {/* layout */}
+      {/* <Header /> */}
+      {/* <Footer /> */}
+      {/* <Home /> */}
+      {/* <About /> */}
+      {/* <Contact /> */}
+      {/* <Help /> */}
+
+      <Routes>
+
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/help" element={<Help />} />
+          <Route path="/about" element={<About />} >
+            <Route path="about1" element={<About1 />} />
+            <Route path="about2" element={<About2 />} />
+          </Route>
+          <Route path="*" element={<Notfound />} />
+
       </Routes>
 
     </BrowserRouter>
