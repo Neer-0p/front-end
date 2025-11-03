@@ -9,15 +9,24 @@ import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 // import About1 from "./Router/Pages/About1";
 // import About2 from "./Router/Pages/About2";
 // import Error from "./Router/Pages/Error";
-import Header from "./Layout/Common/Header";
-import Footer from "./Layout/Common/Footer";
-import Home from "./Layout/Pages/Home";
-import About from "./Layout/Pages/About";
-import Contact from "./Layout/Pages/Contact";
-import Help from "./Layout/Pages/Help";
-import About1 from "./Layout/Pages/About1";
-import About2 from "./Layout/Pages/About2";
-import Notfound from "./Layout/Pages/Notfound";
+// import Header from "./Layout/Common/Header";
+// import Footer from "./Layout/Common/Footer";
+// import Home from "./Layout/Pages/Home";
+// import About from "./Layout/Pages/About";
+// import Contact from "./Layout/Pages/Contact";
+// import Help from "./Layout/Pages/Help";
+// import About1 from "./Layout/Pages/About1";
+// import About2 from "./Layout/Pages/About2";
+// import Notfound from "./Layout/Pages/Notfound";
+import Bottom from "./Website/Comm/Bottom";
+import Nav from "./Website/Comm/Nav";
+import Home from "./Website/Pages/Home";
+import About from "./Website/Pages/About";
+import Contact from "./Website/Pages/Contact";
+import Help from "./Website/Pages/Help";
+import Eror from "./Website/Pages/Eror";
+import About1 from "./Website/Pages/About1";
+import About2 from "./Website/Pages/About2";
 // import Cardcompany from "./UseEffect/Cardcompany";
 // import Cardusers from "./UseEffect/Cardusers";
 // import Axiospract from "./UseEffect/Axiospract";
@@ -115,7 +124,7 @@ function App() {
       {/* <Contact /> */}
       {/* <Help /> */}
 
-      <Routes>
+      {/* <Routes>
 
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
@@ -125,6 +134,28 @@ function App() {
             <Route path="about2" element={<About2 />} />
           </Route>
           <Route path="*" element={<Notfound />} />
+
+      </Routes> */}
+
+      {/* website */}
+
+      {/* <Bottom /> */}
+      {/* <Nav /> */}
+      {/* <Home /> */}
+      {/* <About /> */}
+      {/* <Contact /> */}
+      {/* <Help /> */}
+
+      <Routes>
+
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About/>}>
+          <Route path="about1" element={<About1 />} />
+          <Route path="about2" element={<About2 />} />
+        </Route>
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="*" element={<Eror />} />
 
       </Routes>
 
