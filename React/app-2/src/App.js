@@ -146,7 +146,7 @@ function App() {
       {/* <Contact /> */}
       {/* <Help /> */}
 
-      <Routes>
+      {/* <Routes>
 
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About/>}>
@@ -157,7 +157,7 @@ function App() {
         <Route path="/help" element={<Help />} />
         <Route path="*" element={<Eror />} />
 
-      </Routes>
+      </Routes> */}
 
     </BrowserRouter>
   );

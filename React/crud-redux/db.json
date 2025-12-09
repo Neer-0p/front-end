@@ -1,0 +1,53 @@
+{
+  "user": [
+    {
+      "id": "1764841416930",
+      "name": "Neer",
+      "email": "neerkumbhani.10@gmail.com",
+      "password": "cssasc",
+      "phone": "09265730317"
+    },
+    {
+      "id": "1765043127884",
+      "name": "kavan",
+      "email": "kavan@gmail.com",
+      "password": "cdvfv",
+      "phone": "09265730317"
+    },
+    {
+      "id": "1765043150516",
+      "name": "Dax",
+      "email": "dax@gmail.com",
+      "password": "vsdvfdv",
+      "phone": "09265730317"
+    }
+  ],
+  "product": [
+    {
+      "id": "1",
+      "name": "xyz",
+      "pdetails": "xdg",
+      "price": "200rs"
+    },
+    {
+      "id": "1765041487552",
+      "name": "sweety",
+      "pdetails": "wedfg",
+      "price": "150"
+    },
+    {
+      "id": "1765041536366",
+      "name": "fdd",
+      "pdetails": "vfvfv",
+      "price": "312"
+    }
+  ],
+  "course": [
+    {
+      "id": "1765049249110",
+      "name": "ce",
+      "details": "sadfdf",
+      "price": "312"
+    }
+  ]
+}
