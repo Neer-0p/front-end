@@ -1,0 +1,138 @@
+{
+  "admin": [
+    {
+      "id": "1",
+      "name": "henil",
+      "email": "henil@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "name": "subadmin",
+      "email": "subadmin@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "kavan",
+      "email": "kavan@gmail.com",
+      "password": "kavan",
+      "status": "unblock"
+    },
+    {
+      "id": "2",
+      "name": "het",
+      "email": "het@gmail.com",
+      "password": "1234",
+      "status": "block"
+    },
+    {
+      "id": "3",
+      "name": "varj",
+      "email": "varj@gmail.com",
+      "password": "1234",
+      "status": "unblock"
+    },
+    {
+      "id": "1762934907150",
+      "name": "Neer",
+      "email": "neerkumbhani.10@gmail.com",
+      "password": "123456",
+      "status": "unblock"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1762765320668",
+      "cname": "Back-end ",
+      "img": "https://images.pexels.com/photos/7128957/pexels-photo-7128957.jpeg?_gl=1*ymwjx0*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjIzMjUxMjkkbzMwJGcxJHQxNzYyMzI1MzEzJGozNiRsMCRoMA..",
+      "date": "2025-11-23",
+      "desc": "regfdgtebg",
+      "author": "kavan",
+      "title": "fsdfsddf"
+    },
+    {
+      "id": "1762765992032",
+      "cname": "Back-end ",
+      "img": "https://tse4.mm.bing.net/th/id/OIP.Kk4i-k-7bOfsgPv0SJtj5AHaHa?pid=Api&P=0&h=220",
+      "date": "2025-11-13",
+      "desc": "sdvcsvdfv",
+      "author": "Ayush",
+      "title": "vvfdvdfvsvsdvs"
+    },
+    {
+      "id": "1762766024284",
+      "cname": "data science",
+      "img": "https://tse4.mm.bing.net/th/id/OIP.Kk4i-k-7bOfsgPv0SJtj5AHaHa?pid=Api&P=0&h=220",
+      "date": "2025-11-28",
+      "desc": "sdvfdb",
+      "author": "dax",
+      "title": "vfdvdvdf"
+    }
+  ],
+  "service": [
+    {
+      "id": "1",
+      "department": "Cyber Security",
+      "description": "Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed",
+      "img": "https://tse1.mm.bing.net/th/id/OIP.M5kaZp2NEUhULGQNoT0LvgHaFj?pid=Api&P=0&h=220"
+    },
+    {
+      "id": "2",
+      "department": "Data Analytics",
+      "description": "Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed",
+      "img": "https://tse3.mm.bing.net/th/id/OIP.3C4wff6EpjXMzlaOZXOc2wHaHa?pid=Api&P=0&h=220"
+    }
+  ],
+  "price": [
+    {
+      "id": "1",
+      "Plan": "Basic Plan",
+      "price": "56",
+      "includes": "HTML5 & CSS3,Bootstrap v5"
+    },
+    {
+      "id": "2",
+      "Plan": "Standard Plan",
+      "price": "99nth",
+      "includes": "HTML5 & CSS3,Bootstrap v5,Responsive Layout"
+    },
+    {
+      "id": "3",
+      "Plan": "Advanced Plan",
+      "price": "149",
+      "includes": "HTML5 & CSS3,Bootstrap v5,Responsive Layout,Cross-browser Support"
+    },
+    {
+      "id": "1762763873629",
+      "Plan": "Premium",
+      "price": "124",
+      "includes": "eferggvgr"
+    }
+  ],
+  "staff": [
+    {
+      "id": "2",
+      "name": "Kavan",
+      "department": "Back-end",
+      "position": "Senior-Developer",
+      "img": "https://tse3.mm.bing.net/th/id/OIP.3C4wff6EpjXMzlaOZXOc2wHaHa?pid=Api&P=0&h=220"
+    },
+    {
+      "id": "3",
+      "name": "Yash",
+      "department": "Front-end",
+      "position": "Developer",
+      "img": "https://tse4.mm.bing.net/th/id/OIP.JPogPMSOOv8g9WJdtLUluAHaEe?pid=Api&P=0&h=220"
+    },
+    {
+      "id": "1762421522671",
+      "name": "Neer",
+      "position": "CEO",
+      "department": "Cyber security",
+      "img": "https://tse4.mm.bing.net/th/id/OIP.Kk4i-k-7bOfsgPv0SJtj5AHaHa?pid=Api&P=0&h=220"
+    }
+  ]
+}
