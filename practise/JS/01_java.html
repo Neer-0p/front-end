@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+
+    <h1 id="h1"></h1>
+    <h2 id="h2"></h2>
+    <h3 id="h3"></h3>
+    <h4 id="h4"></h4>
+    <h5 id="h5"></h5>
+    <h6 id="h6"></h6>
+    <script>
+        console.log("Hello")
+        console.log(10+10)
+        document.write("hello")
+
+        // dom:- dociment object model
+
+        document.write("hello world")
+        document.write("<h1> this is something else </h1>")
+        document.write(5+5)
+
+        // dom method innertext
+
+        document.getElementById("h2").innerText = "hello"
+        // document.getElementById("h1").innerText = "<i>javascript </i>"
+        document.getElementById("h1").innerText = "javascript"
+        document.getElementById("h3").innerText = 5+5
+
+        // dom method innerhtml
+
+        document.getElementById("h4").innerHTML = "<i>hello</i>"
+
+    </script>
+</body>
+</html>

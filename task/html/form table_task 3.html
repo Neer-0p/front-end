@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 3</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <table >
+                <legend>Customer</legend>
+                <tr>
+                    <td>Name<span style="color: red;">*</span></td>
+                    <td><input type="text" required pattern="[A-Za-z]{3,8}"></td>
+                </tr>
+                <tr>
+                    <td>E-mail <span style="color: red;">*</span></td>
+                    <td><input type="email" required pattern="[a-z0-9]+@[a-z]+.[a-z]{2, 3}$"></td>
+                </tr>
+                <tr>
+                    <td>Investment</td>
+                    <td><input type="number" min="1"></td>
+                </tr>
+                <tr>
+                    <td>Date Joined<span style="color: red;">*</span></td>
+                    <td><input type="date" required></td>
+                </tr>
+                <tr>
+                    <td>Active</td>
+                    <td><input type="checkbox" name="" id=""></td>
+                </tr>
+            </table>
+        </fieldset>
+        <input type="submit" value="OK">
+        <input type="submit" value="Cancel">
+    </form>
+</body>
+</html>

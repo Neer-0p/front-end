@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <table align="center">
+        <caption><h2>Sign Up</h2></caption>
+        <form action="">
+            <tr>
+                <td>First, Last Name <span style="color: red;">*</span>:</td>
+                <td><input type="text"><input type="text" required pattern="[A-Za-z]{3,8}"></td>
+            </tr>
+            <tr>
+                <td>Organization:</td>
+                <td><input type="text" required pattern="[A-Za-z]{3,8}"></td>
+            </tr>
+            <tr>
+                <td>Email address:</td>
+                <td><input type="email" required pattern="[a-z0-9]+@[a-z]+.[a-z]{2, 3}$"></td>
+            </tr>
+            <tr>
+                <td>Work Phone:</td>
+                <td><input type="tel" required pattern="[6789][0-9]{9}" maxlength="10"></td>
+            </tr>
+            <tr>
+                <td>House Phone:</td>
+                <td><input type="tel" required pattern="[6789][0-9]{9}" maxlength="10"></td>
+            </tr>
+            <tr>
+                <td>Cellphone:</td>
+                <td><input type="tel" required pattern="[6789][0-9]{9}" maxlength="10"></td>
+            </tr>
+            <tr>
+                <td>Faxx:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Address 1 <span style="color: red;">*</span></td>
+                <td><textarea required id="" cols="30" rows="1"></textarea></td>
+            </tr>
+            <tr>
+                <td>Address 2</td>
+                <td><textarea name="" id="" cols="30" rows="1"></textarea></td>
+            </tr>
+            <tr>
+                <td>City <span style="color: red;">*</span>:</td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td>State Presence:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Zip Postal Code:</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Country <span style="color: red;">*</span>:</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td><span style="color: red;">*</span>: Required Field</td>
+                <td><input type="submit"></td>
+            </tr>
+            <tr>
+                <td align="right" colspan="2"><a href="http://127.0.0.1:5500/task/task%202%20form.html">Form</a></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+</head>
+
+<body>
+    <script>
+
+        class Bank {
+            constructor(balance,debit,credit) {
+                this.balance = balance
+                this.debit = debit
+                this.credit = credit
+
+                // document.writeln("balance =>", this.balance)
+                // document.writeln("amount =>", this.amount)
+            }
+            deposit() {
+                if (this.credit > 0) {
+                    document.writeln("deposit =>",this.credit,"<br>")
+                    document.writeln("balance =>",this.balance + this.credit,"<br>")
+                }
+                else{
+                    document.writeln("Invalid amount (Transaction failed)")
+                }
+            }
+            withdraw(){
+                if(this.debit <= 0){
+                    document.writeln("Invalid amount (Transaction failed)")
+                }
+                else if(this.debit > this.balance){
+                    document.writeln("Insufficient balance! available balance",balance,"<br>")
+                }
+                else{
+                    this.balance = this.balance - this.debit
+                    document.writeln("debited =>",this.debit,"<br>")
+                    document.writeln("Available balance =>",this.balance,"<br>")
+                }
+            }
+        }
+
+        let User1 = new Bank(1000,0,500)
+        User1.deposit()
+        // User1.withdraw()
+
+    </script>
+</body>
+
+</html>

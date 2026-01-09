@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM TASK</title>
+    <style>
+        body {
+            background: black;
+        }
+
+        table {
+            margin: 50px auto;
+            /* border: 2px solid white; */
+            color: white;
+            padding: 30px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5));
+            box-shadow: 0 0 20px 10px lightgoldenrodyellow;
+        }
+
+        caption {
+            text-transform: uppercase;
+            color: white;
+            font-size: 30px;
+            padding-bottom: 10px;
+        }
+
+        td {
+            padding: 10px;
+            text-transform: capitalize;
+        }
+
+        input {
+            outline: none;
+            background: transparent;
+            color: white;
+        }
+
+        .button {
+            text-align: center;
+        }
+
+        label {
+            text-shadow: 5px 5px 10px yellow, -5px -5px 10px yellow;
+        }
+
+        .main-btn {
+            padding: 10px 20px;
+            background: transparent;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 100%;
+            background: lightgoldenrodyellow;
+            height: 2px;
+            width: 100%;
+            animation: moveTop 1s linear infinite;
+        }
+
+        .main-btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 100%;
+            background: lightcoral;
+            height: 2px;
+            width: 100%;
+            animation: moveBottom 1s linear infinite;
+        }
+
+        .main-btn span::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 100%;
+            background: lightseagreen;
+            height: 100%;
+            width: 2px;
+            animation: moveRight 1s linear infinite;
+        }
+
+        .main-btn span::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background: lightskyblue;
+            height: 100%;
+            width: 2px;
+            animation: moveLeft 1s linear infinite;
+        }
+
+        @keyframes moveTop {
+            0% {
+                left: -100%;
+            }
+
+            25% {
+                left: 0;
+            }
+
+            50% {
+                left: 100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        @keyframes moveRight {
+            0% {
+                top: -100%;
+            }
+
+            25% {
+                top: -100%;
+            }
+
+            50% {
+                top: 0;
+            }
+
+            75% {
+                top: 100%;
+            }
+
+            100% {
+                top: 100%;
+            }
+        }
+
+        @keyframes moveBottom {
+            0% {
+                left: 100%;
+            }
+
+            25% {
+                left: 0;
+            }
+
+            50% {
+                left: -100%;
+            }
+
+            100% {
+                left: -100%;
+            }
+        }
+
+        @keyframes moveLeft {
+            0% {
+                top: 100%;
+            }
+
+            25% {
+                top: 0;
+            }
+
+            50% {
+                top: -100%;
+            }
+
+            100% {
+                top: -100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>registration form</caption>
+        <form action="" id="form">
+            <tr>
+                <td><label for="">Firstname</label></td>
+                <td><input type="text" id="nm"></td>
+                <td><span id="nm-er"></span></td>
+            <tr>
+            <tr>
+                <td><label for="">Lastname:</label></td>
+                <td><input type="text" id="ln"></td>
+                <td><span id="ln-er"></span></td>
+            <tr>
+            <tr>
+                <td><label for="">Phone:</label></td>
+                <td><input type="tel" maxlength="10" id="mb"></td>
+                <td><span id="mb-er"></span></td>
+            <tr>
+            <tr>
+                <td><label for="">Email:</label></td>
+                <td><input type="email" id="em"></td>
+                <td><span id="em-er"></span></td>
+            <tr>
+            <tr>
+                <td><label for="">Password:</label></td>
+                <td><input type="password" id="pwd"></td>
+                <td><span id="pwd-er"></span></td>
+            <tr>
+            <tr>
+                <td><label for="">Re-type password:</label></td>
+                <td><input type="password" id="rpwd"></td>
+            <tr>
+            <tr>
+                <td><button type="submit" id="btn" class="main-btn">
+                        sign up
+                        <span></span>
+                    </button></td>
+            </tr>
+        </form>
+    </table>
+    <script>
+        document.getElementById("form").onsubmit = function (event) {
+            event.preventDefault()
+            // get values
+            let nm = document.getElementById("nm").value
+            let ln = document.getElementById("ln").value
+            let mb = document.getElementById("mb").value
+            let em = document.getElementById("em").value
+            let pwd = document.getElementById("pwd").value
+            let rpwd = document.getElementById("rpwd").value
+
+            // get error
+            let nmerr = document.getElementById("nm-er")
+            let lnerr = document.getElementById("ln-er")
+            let mberr = document.getElementById("mb-er")
+            let emerr = document.getElementById("em-er")
+            let pwderr = document.getElementById("pwd-er")
+
+            // clear previous errors
+            nmerr.innerText = "";
+            lnerr.innerText = "";
+            mberr.innerText = "";
+            emerr.innerText = "";
+            pwderr.innerText = "";
+
+
+            // patterns
+            let namePattern = /^[A-Za-z\s]+$/;
+            let mobilePattern = /^[0-9]{10}$/;
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            let hasError = false;
+
+            // name
+            if (nm == "") {
+                nmerr.innerHTML = "Enter your name"
+                nmerr.style.color = "red"
+                hasError = true
+            } else if (!namePattern.test(nm)) {
+                nmerr.innerHTML = "Numbers are not allowed"
+                nmerr.style.color = "red"
+                hasError = true
+            }
+            // lastname
+            if (ln == "") {
+                lnerr.innerHTML = "last name must be required.."
+                lnerr.style.color = "red"
+                hasError = true
+            } else if (!namePattern.test(ln)) {
+                lnerr.innerHTML = "Numbers are not allowed"
+                lnerr.style.color = "red"
+                hasError = true
+            }
+            // mobile
+            if (mb == "") {
+                mberr.innerHTML = "Number must be required.."
+                mberr.style.color = "red"
+                hasError = true
+            } else if (!mobilePattern.test(mb)) {
+                mberr.innerHTML = "only numbers are allowed"
+                mberr.style.color = "red"
+                hasError = true
+            }
+            // email
+            if (em == "") {
+                emerr.innerHTML = "Email must be required.."
+                emerr.style.color = "red"
+                hasError = true
+            } else if (!emailPattern.test(em)) {
+                emerr.innerHTML = "Must follow the pattern"
+                emerr.style.color = "red"
+                hasError = true
+            }
+            // pass
+            if (pwd == "") {
+                pwderr.innerHTML = "Password is required";
+                pwderr.style.color = "red"
+                hasError = true;
+            } else if (pwd.length < 6) {
+                pwderr.innerHTML = "Password must be at least 6 characters";
+                pwderr.style.color = "red"
+                hasError = true;
+            } else if (pwd !== rpwd) {
+                pwderr.innerHTML = "Passwords do not match";
+                pwderr.style.color = "red"
+                hasError = true;
+            }
+
+
+            if (!hasError) {
+                alert("form submitted successfully..")
+            }
+        }
+
+    </script>
+</body>
+
+</html>

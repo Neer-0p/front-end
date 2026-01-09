@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doubler_effect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            text-transform: capitalize;
+            font-family: "Dancing Script", cursive;
+            font-size: larger;
+            color: gold;
+            text-align: right;
+            line-height: 500px;
+            font-weight: 900;
+        }
+
+        .car {
+            height: 300px;
+            width: 500px;
+            background: url(https://wallpaperaccess.com/full/124068.jpg);
+            background-size: 100% 100%;
+            margin: 100px auto;
+            border: 2px transparent;
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .text {
+            height: 260px;
+            width: 460px;
+            margin: 20px 20px;
+        }
+
+        .tri {
+            height: 500px;
+            width: 200px;
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            left: 60%;
+            bottom: 0%;
+            clip-path: polygon(0 50%, 100% 100%, 100% 0);
+            opacity: 0;
+            transition: .8s;
+        }
+        .car:hover .tri{
+            opacity: 0.4;
+        }
+        .square{
+            height: 300px;
+            width: 500px;
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            left: 100%;
+            bottom: 100%;
+            transition: .8s;
+        }
+        .car:hover .square{
+            position: absolute;
+            left: 0%;
+            bottom: 0%;
+            opacity: 2;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="car">
+        <div class="text">
+            lamborgini
+        </div>
+        <div class="tri"></div>
+        <div class="square"></div>
+    </div>
+</body>
+
+</html>

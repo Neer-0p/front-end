@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB_11</title>
+</head>
+
+<body>
+    <h3>=> Create a JavaScript object car with properties brand, model, and year. UseJavaScript
+        to:</h3>
+
+    <p id="output"></p>
+
+    <script>
+
+        let car = {
+            brand: "BMW",
+            model: "BMW-M4",
+            year: "2024",
+        }
+
+        let output = ""
+
+        // Access and print data
+        output += "Brand =>" + car.brand + "<br>"
+        output += "Model =>" + car.model + "<br>"
+
+        // update
+        car.year = "2025"
+        output += "Updated year =>" + car.year + "<br>"
+
+        // add
+        car.color = "Red";
+        output += "Color =>" + car.color + "<br>"
+
+        document.getElementById("output").innerHTML = output
+
+
+    </script>
+</body>
+
+</html>

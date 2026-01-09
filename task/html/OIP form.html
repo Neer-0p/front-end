@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM TASK</title>
+</head>
+<body style="background-color:rgb(84, 186, 227);">
+    <form action="">
+        <div>
+            <label for="">Firstname</label>
+            <input type="text" required pattern="[A-Za-z]{3,8}">
+        </div>
+        <div>
+            <label for="">Middlename:</label>
+            <input type="text" required pattern="[A-Za-z]{3,8}">
+        </div>
+        <div>
+            <label for="">Lastname:</label>
+            <input type="text" required pattern="[A-Za-z]{3,8}">
+        </div>
+        <div>
+            <label for="">Course:</label>
+            <select>
+                <option value="">Course</option>
+                <option value="">IT</option>
+                <option value="">DESIGNING</option>
+                <option value="">CE</option>
+                <option value="">CSE</option>
+            </select>
+        </div>
+        <div>
+            <div><label for="">Gender:</label></div>
+            <div><input type="radio">Male</div> 
+            <div><input type="radio">Female</div> 
+            <div><input type="radio">Other</div>
+        </div>
+        <div>
+            <label for="">Phone:</label>
+            <select>
+                <option value="">+91</option>
+            </select>
+            <input type="tel" required pattern="[6789][0-9]{9}" maxlength="10">
+        </div>
+        <div>
+            <div><label for="">Address</label></div>
+            <textarea name="" cols="40" rows="5"></textarea>
+        </div>
+        <div>
+            <label for="">Email:</label>
+            <input type="email" required pattern="[a-z0-9]+@[a-z]+.[a-z]{2, 3}$">
+        </div>
+        <div>
+            <label for="">Password:</label>
+            <input type="password" required pattern="[A-Za-z0-9@]{8,12}">
+        </div>
+        <div>
+            <label for="">Re-type password:</label>
+            <input type="password" required pattern="[A-Za-z0-9@]{8,12}">
+        </div>
+        <input type="submit">
+    </form>
+</body>
+</html>

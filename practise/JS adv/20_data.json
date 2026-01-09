@@ -1,0 +1,37 @@
+{
+    "user" : [
+        {
+            "id" : 1,
+            "name" : "het",
+            "course" : "front-end"
+        },
+        {
+            "id" : 2,
+            "name" : "neer",
+            "course" : "front-end"
+        },
+        {
+            "id" : 1,
+            "name" : "swet",
+            "course" : "front-end"
+        }
+    ],
+
+    "admin" : [
+        {
+            "id" : 1,
+            "name" : "het",
+            "course" : "front-end"
+        },
+        {
+            "id" : 2,
+            "name" : "neer",
+            "course" : "front-end"
+        },
+        {
+            "id" : 1,
+            "name" : "swet",
+            "course" : "front-end"
+        }
+    ]
+}

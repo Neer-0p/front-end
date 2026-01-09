@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission form</title>
+</head>
+<body>
+    
+    <table >
+        <p align="left"><h2>Admission Form</h2></p>
+        <div>Enter your admission information below</div>
+        <hr>
+        <tr>
+            <td><b>Name</b><span style="color: red;">*</span></td>
+        </tr>
+        <tr>
+            <td><input type="text" required pattern="[A-Za-z]{3,8}"></td>
+            <td><input type="text" required pattern="[A-Za-z]{3,8}"></td>
+            <td><input type="text" required pattern="[A-Za-z]{3,8}"></td>    
+        </tr>
+        <tr>
+            <td>First name</td>
+            <td>Middle Name</td>
+            <td>Last name</td>
+        </tr>
+        <tr>
+            <td><b>Birth Date</b><span style="color: red;">*</span></td>
+        </tr>
+        <tr>
+            <td><input type="month" name="" id=""></td>
+            <td><input type="number" name="" id=""></td>
+            <td><input type="number" name="" id=""></td>
+        </tr>
+        <tr>
+            <td>Month</td>
+            <td>Day</td>
+            <td>Year</td>
+        </tr>
+        <tr>
+            <td><b>Gender</b><span style="color: red;">*</span></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="gender">Male</td></tr>
+            <tr><td><input type="radio" name="gender">Female</td></tr>
+           <tr> <td><input type="radio" name="gender">Decline to Answer</td>
+        </tr>
+        <tr>
+            <td><b>Are you Hispanic or Latino?</b><span style="color: red;">*</span></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="abc">No</td></tr>
+           <tr> <td><input type="radio" name="abc">Yes</td></tr>
+            <tr><td><input type="radio" name="abc">Decline to Answer</td>
+        </tr>
+    </table>
+</body>
+</html>

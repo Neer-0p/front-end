@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORM TASK</title>
+  <style>
+    body {
+      background: black;
+    }
+
+    table {
+      margin: 50px auto;
+      color: white;
+      padding: 30px;
+      background: linear-gradient(rgba(0, 0, 0, 0.5));
+      box-shadow: 0 0 20px 10px lightgoldenrodyellow;
+    }
+
+    caption {
+      text-transform: uppercase;
+      color: white;
+      font-size: 30px;
+      padding-bottom: 10px;
+    }
+
+    td {
+      padding: 10px;
+      text-transform: capitalize;
+    }
+
+    input {
+      outline: none;
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+      padding: 5px;
+    }
+
+    input.error {
+      border: 1px solid red;
+      color: red;
+    }
+
+    label {
+      text-shadow: 5px 5px 10px yellow, -5px -5px 10px yellow;
+    }
+
+    .main-btn {
+      padding: 10px 20px;
+      background: transparent;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      border: none;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="" id="form">
+    <table>
+      <caption>registration form</caption>
+      <tr>
+        <td><label for="nm">Firstname</label></td>
+        <td><input type="text" id="nm" placeholder="Enter firstname"></td>
+      </tr>
+      <tr>
+        <td><label for="ln">Lastname:</label></td>
+        <td><input type="text" id="ln" placeholder="Enter lastname"></td>
+      </tr>
+      <tr>
+        <td><label for="mb">Phone:</label></td>
+        <td><input type="tel" maxlength="10" id="mb" placeholder="Enter phone"></td>
+      </tr>
+      <tr>
+        <td><label for="em">Email:</label></td>
+        <td><input type="email" id="em" placeholder="Enter email"></td>
+      </tr>
+      <tr>
+        <td><label for="pwd">Password:</label></td>
+        <td><input type="password" id="pwd" placeholder="Enter password"></td>
+      </tr>
+      <tr>
+        <td><label for="rpwd">Re-type password:</label></td>
+        <td><input type="password" id="rpwd" placeholder="Re-enter password"></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="button">
+          <button type="submit" id="btn" class="main-btn">sign up</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <script>
+    document.getElementById("form").onsubmit = function (event) {
+      event.preventDefault();
+
+      // get values
+      let nm = document.getElementById("nm");
+      let ln = document.getElementById("ln");
+      let mb = document.getElementById("mb");
+      let em = document.getElementById("em");
+      let pwd = document.getElementById("pwd");
+      let rpwd = document.getElementById("rpwd");
+
+      // clear previous errors
+      [nm, ln, mb, em, pwd, rpwd].forEach(input => {
+        input.classList.remove("error");
+        input.placeholder = input.getAttribute("data-placeholder") || input.placeholder;
+      });
+
+      // patterns
+      let namePattern = /^[A-Za-z\s]+$/;
+      let mobilePattern = /^[0-9]{10}$/;
+      let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      let hasError = false;
+
+      // Firstname
+      if (nm.value.trim() === "") {
+        nm.value = "";
+        nm.placeholder = "Firstname is required";
+        nm.classList.add("error");
+        hasError = true;
+      } else if (!namePattern.test(nm.value)) {
+        nm.value = "";
+        nm.placeholder = "Only letters allowed";
+        nm.classList.add("error");
+        hasError = true;
+      }
+
+      // Lastname
+      if (ln.value.trim() === "") {
+        ln.value = "";
+        ln.placeholder = "Lastname is required";
+        ln.classList.add("error");
+        hasError = true;
+      } else if (!namePattern.test(ln.value)) {
+        ln.value = "";
+        ln.placeholder = "Only letters allowed";
+        ln.classList.add("error");
+        hasError = true;
+      }
+
+      // Mobile
+      if (mb.value.trim() === "") {
+        mb.value = "";
+        mb.placeholder = "Phone required";
+        mb.classList.add("error");
+        hasError = true;
+      } else if (!mobilePattern.test(mb.value)) {
+        mb.value = "";
+        mb.placeholder = "Enter 10 digits";
+        mb.classList.add("error");
+        hasError = true;
+      }
+
+      // Email
+      if (em.value.trim() === "") {
+        em.value = "";
+        em.placeholder = "Email required";
+        em.classList.add("error");
+        hasError = true;
+      } else if (!emailPattern.test(em.value)) {
+        em.value = "";
+        em.placeholder = "Invalid email";
+        em.classList.add("error");
+        hasError = true;
+      }
+
+      // Password
+      if (pwd.value.trim() === "") {
+        pwd.value = "";
+        pwd.placeholder = "Password required";
+        pwd.classList.add("error");
+        hasError = true;
+      } else if (pwd.value.length < 6) {
+        pwd.value = "";
+        pwd.placeholder = "Min 6 characters";
+        pwd.classList.add("error");
+        hasError = true;
+      }
+
+      // Re-type password
+      if (rpwd.value.trim() === "") {
+        rpwd.value = "";
+        rpwd.placeholder = "Re-enter password";
+        rpwd.classList.add("error");
+        hasError = true;
+      } else if (pwd.value !== rpwd.value) {
+        rpwd.value = "";
+        rpwd.placeholder = "Passwords don't match";
+        rpwd.classList.add("error");
+        hasError = true;
+      }
+
+      if (!hasError) {
+        alert("Form submitted successfully!");
+      }
+    }
+  </script>
+</body>
+</html>

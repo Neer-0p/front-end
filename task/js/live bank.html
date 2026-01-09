@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>live server</title>
+</head>
+
+<body>
+    <h1>ATM MACHINE</h1>
+    <input id="inp" type="number" placeholder="Enter amount">
+    <button onclick="user.deposit.add()">Deposit</button>
+    <button onclick="user.withdraw.cut()">Withdraw</button>
+    <p id="data"></p>
+
+    <script>
+        // intial 
+        let pin = 1234
+        let balance = 5000
+
+        class Bank {
+            // display fun
+            display = function view(pin, balance) {
+                document.getElementById("data").innerHTML = 
+                "Bank name : HDFC <br> IFSC Code : HD0001 <br>"
+                document.getElementById("data").innerHTML = "Pin :",pin
+                document.getElementById("data").innerHTML = "balance :",balance
+            }
+
+            // deposit fun
+            deposit = function add(balance, amount) {
+                let amount = Number(document.getElementById("inp").value)
+                if (amount > 0) {
+                    balance = balance + amount
+                    display("Credit :",amount)
+                    display("Updated balance :",balance)
+                    
+                }
+                else {
+                    display("Invalid amount (Transaction failed)")
+                }
+                return balance
+            }
+
+            // withdraw fun
+            withdraw = function cut(balance,amount){
+                let amount = Number(document.getElementById("data").value)
+                if(amount <= 0){
+                    display("Invalid Amount")
+                }
+                else if(amount > balance){
+                    display("Insufficient balance! available-balance :",balance)
+                }
+                else{
+                    balance = balance - amount
+                    display("debited amount :",amount)
+                    display("Available balance :",balance)
+                }
+                return balance
+            }
+        }
+
+        let user = new Bank(1234,5000)
+        user.display("Welcome!")
+
+    </script>
+</body>
+
+</html>

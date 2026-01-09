@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            height: 30px;
+            border: 2px solid;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: black;
+            line-height: 30px;
+            position: relative;
+            border: 8px solid white;
+            border-radius: 10px;
+        }
+
+        .text {
+            border-right: 2px solid white;
+        }
+
+        .text a {
+            text-decoration: none;
+            color: white;
+            text-transform: capitalize;
+            letter-spacing: 5px;
+            padding-right: 30px;
+        }
+
+        .text a::before {
+            content: "";
+            height: 4px;
+            width: 100%;
+            background-color: aquamarine;
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            transform: scale(0);
+            transition: 1s;
+        }
+
+        .text a:hover::before {
+            transform: scale(1);
+        }
+
+        .list {
+            border: 10px solid;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            padding: 0;
+            display: none;
+        }
+
+        .data {
+            list-style: none;
+            background-color: yellow;
+            color: rgb(0, 0, 0);
+            border: 3px solid rgb(0, 0, 0);
+            border-radius: 30px;
+            padding: 10px;
+            text-align: center;
+            text-transform: capitalize;
+            font-weight: 900;
+        }
+
+        #text:hover .list {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="text"><a href=""><i class="fa-solid fa-house-user"></i> home</a></div>
+        <div class="text"><a href=""><i class="fa-solid fa-address-card"></i> about</a></div>
+        <div class="text" id="text">
+            <a href="">more <i class="fa-solid fa-square-caret-down"></i></a>
+            <ul class="list">
+                <li class="data">link 1</li>
+                <li class="data">link 2</li>
+                <li class="data">link 3</li>
+                <li class="data">link 4</li>
+            </ul>
+        </div>
+        <div class="text"><a href=""><i class="fa-solid fa-address-book"></i> Contact</a></div>
+        <div class="text"><a href=""><i class="fa-solid fa-dungeon"></i> extra</a></div>
+    </div>
+</body>
+</html>

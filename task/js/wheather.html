@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather_API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <style>
+
+        .card {
+            background: linear-gradient(135deg, #00feba, #5b548a);
+        }
+
+        .search input {
+            border: 0;
+            outline: 0;
+            height: 60px;
+            font-size: 18px;
+        }
+
+        .search button {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+        }
+
+        .humidity,
+        .wind {
+            font-size: 28px;
+        }
+
+        .fa-magnifying-glass {
+            font-size: 25px;
+        }
+
+        .weather {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card text-center w-50 mx-auto p-5 text-white border-0 mt-5 rounded-4">
+        <div class="search mb-3 border rounded-pill bg-white">
+            <input onkeypress="weather(searchinp.value)" class="rounded-pill ps-3 text-uppercase" type="text" placeholder="Enter city name" spellcheck="false">
+            <button class="border-0 bg-white" onclick="weather(searchinp.value)"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="weather">
+            <h1 class="temp mb-0 fs-1">22°C</h1>
+            <p class="templike m-0">25°C</p>
+            <h2 class="city text-uppercase">new york</h2>
+            <div class="d-flex justify-content-between">
+                <div class="">
+                    <p class="humidity mb-0">50%</p>
+                    <p class="m-0 text-uppercase">Humidity</p>
+                </div>
+                <div>
+                    <p class="wind mb-0">15 Km/h</p>
+                    <p class="m-0 text-uppercase">Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // https://api.openweathermap.org/data/2.5/weather?q=ahemdabad&appid=48363ac8fb1b04e30681ad94d56bd4c4&units=metric
+
+        // open weather api 
+        // &appid=48363ac8fb1b04e30681ad94d56bd4c4
+
+        let apikey = "48363ac8fb1b04e30681ad94d56bd4c4"
+
+        let apiid = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q="
+
+        let searchinp = document.querySelector(".search input")
+        let searchbtn = document.querySelector(".search button")
+
+        async function weather(city) {
+
+            const res = await fetch(apiid + city + `&appid=${apikey}`)
+
+            const result = await res.json()
+
+            console.log(result)
+
+            document.querySelector(".city").innerHTML = result.name + "," + result.sys.country
+            document.querySelector(".temp").innerHTML = Math.round(result.main.temp) + "°C"
+            document.querySelector(".humidity").innerHTML = result.main.humidity + " %"
+            document.querySelector(".wind").innerHTML = result.wind.speed + " Km/h"
+            document.querySelector(".templike").innerHTML = "Feel like: " + Math.round(result.main.feels_like) + "°C"
+
+            document.querySelector(".weather").style.display = "block"
+        }
+
+    </script>
+
+</body>
+
+</html>

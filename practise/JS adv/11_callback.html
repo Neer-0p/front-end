@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- callback :- it needs min two function and it works when outter fun call then inner fun call -->
+     <script>
+
+        function outer(){
+            console.log(inner())
+        }
+
+        function inner(){
+            let a=10,b=5
+            return a+b
+        }
+
+        outer()
+
+     </script>
+</body>
+</html>

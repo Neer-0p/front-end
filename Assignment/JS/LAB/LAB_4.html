@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB_4</title>
+    <style>
+        p{
+            background: black;
+            color: white;
+            height: 50px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Enter a number (1-7) to get the day of the week</h2>
+    <input type="number" id="dayinput" min="1" max="7">
+    <button onclick="day()">click me</button>
+    <p id="output"></p>
+
+    <script>
+
+        document.write("Task 1<br>")
+
+        let x = 33
+        if (x >= 1) {
+            document.write("number is positive=>", x)
+        }
+        else if (x == 0) {
+            document.write("number is zero=>", x)
+        }
+        else if (x <= -1) {
+            document.write("number is negative=>", x)
+        }
+
+        document.write("<br>Task 2<br>")
+
+        function day() {
+            let input = parseInt(document.getElementById("dayinput").value)
+            let dayname;
+            switch (input) {
+                case 1:
+                    dayname = "monday"
+                    break
+                case 2:
+                    dayname = "tuesday"
+                    break
+                case 3:
+                    dayname = "wednesday"
+                    break
+                case 4:
+                    dayname = "thrusday"
+                    break
+                case 5:
+                    dayname = "friday"
+                    break
+                case 6:
+                    dayname = "saturday"
+                    break
+                case 7:
+                    dayname = "sunday"
+                    break                    
+                default:
+                    dayname = "Invalid input! please enter 1 to 7 numbers only."
+            }
+            document.getElementById("output").innerHTML = dayname
+        }
+    </script>
+</body>
+
+</html>

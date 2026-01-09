@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+    <style>
+        .car{
+            height: 300px;
+            width: 500px;
+            background: url(https://digitalsynopsis.com/wp-content/uploads/2014/06/supercar-wallpapers-lamborghini-4.jpg);
+            background-size: 100% 100%;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .car::after{
+            content: "";
+            height: 300px;
+            width: 500px;
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 100%;
+            right: 100%;
+            transition: .6s;
+        }
+        .car:hover::after{
+            position: absolute;
+            top: 0%;
+            right: 0%;
+        }
+        .car::before{
+            content: "";
+            height: 300px;
+            width: 500px;
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            bottom: 100%;
+            left: 100%;
+            transition: .6s;
+        }
+        .car:hover::before{
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div class="car"></div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Bank {
+            // member fun
+            display = function details(pin, balance) {
+                // data member
+                let bankname = "HDFC"
+                let IFSC = "HD0001"
+
+                document.writeln("Bank Name :", bankname,"<br>")
+                document.writeln("ISFC Code :", IFSC,"<br>")
+                document.writeln("PIN :", pin,"<br>")
+                document.writeln("Bank balance :", balance,"<br>")
+            }
+
+            // deposit fun
+            deposit = function add(balance, amount) {
+                if (amount > 0) {
+                    balance = balance + amount
+                    document.writeln("Deposit :",amount,"<br>") 
+                    document.writeln("New balance :",balance,"<br>")
+                }
+                else {
+                    document.writeln("Invalid deposit amount","<br>")
+                }
+                return balance
+            }
+
+            // withdraw fun
+            withdraw = function cut(balance, amount) {
+                if (amount <= 0) {
+                    document.writeln("Invalid withdrwal amount","<br>")
+                }
+                else if (amount > balance) {
+                    document.writeln("Insufficient balance! Current balance :", balance,"<br>")
+                }
+                else {
+                    balance = balance - amount;
+                    document.writeln("Withdrawal :",amount,"<br>") 
+                    document.writeln("New balance :",balance,"<br>")
+                }
+                return balance
+            }
+
+        }
+
+        let user1 = new Bank
+        let balance = 1000
+        document.writeln("---Initial details---","<br>")
+        user1.display(1234,balance)
+
+        document.writeln("---Deposit ---","<br>")
+        balance = user1.deposit(balance,2000)
+
+        document.writeln("---Withdrwal ---","<br>")
+        balance = user1.withdraw(balance,500)
+
+    </script>
+
+</body>
+
+</html>

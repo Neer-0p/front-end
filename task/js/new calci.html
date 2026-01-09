@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <style>
+        .cal-body {
+            border: 2px solid white;
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: 50px auto;
+            padding: 10px;
+        }
+
+        .screen {
+            margin: 0 auto;
+        }
+
+        input {
+            font-size: 20px;
+        }
+
+        .button {
+            background: grey;
+            border: 2px solid;
+            width: 50%;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+        }
+        body{
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cal-body">
+        <div class="screen">
+            <input type="text" id="display" disabled>
+        </div>
+        <div class="button">
+            <button onclick="number('9')">9</button>
+            <button onclick="number('8')">8</button>
+            <button onclick="number('7')">7</button>
+            <button onclick="number('6')">6</button>
+            <button onclick="number('5')">5</button>
+            <button onclick="number('4')">4</button>
+            <button onclick="number('3')">3</button>
+            <button onclick="number('2')">2</button>
+            <button onclick="number('1')">1</button>
+            <button onclick="clearDisplay()">c</button>
+            <button onclick="number('0')">0</button>
+            <button onclick="appendoperator('+')">+</button>
+            <button onclick="appendoperator('-')">-</button>
+            <button onclick="appendoperator('/')">/</button>
+            <button onclick="appendoperator('*')">*</button>
+            <button onclick="calculate('')">= total</button>
+        </div>
+    </div>
+
+    <script>
+
+        let expression = '';
+
+        function number(value) {
+            expression += value;
+            document.getElementById('display').value = expression;
+        }
+
+        function appendoperator(operator) {
+            if (expression === '') return;
+            const lastChar = expression[expression.length - 1];
+            if (['+', '-', '*', '/'].includes(lastChar)) return;
+            expression += operator;
+            document.getElementById('display').value = expression;
+        }
+
+        function clearDisplay() {
+            expression = '';
+            document.getElementById('display').value = expression;
+        }
+
+        function calculate() {
+            if (expression === '') return;
+
+            let i = 0;
+            let currentNumber = '';
+            let lastOperator = '+';
+            let total = 0;
+            let temp = 0; // For handling * and /
+
+            while (i <= expression.length) {
+                const char = expression[i] || ''; // Empty string at end to process last number
+
+                if (char >= '0' && char <= '9') {
+                    currentNumber += char;
+                } else if (['+', '-', '*', '/', ''].includes(char)) {
+                    if (currentNumber === '') {
+                        expression = 'Invalid';
+                        document.getElementById('display').value = expression;
+                        return;
+                    }
+
+                    let num = parseFloat(currentNumber);
+
+                    if (lastOperator === '+') {
+                        temp = num;
+                    } else if (lastOperator === '-') {
+                        temp = -num;
+                    } else if (lastOperator === '*') {
+                        temp = temp * num;
+                    } else if (lastOperator === '/') {
+                        temp = temp / num;
+                    }
+
+                    if (char === '+' || char === '-' || char === '') {
+                        total += temp;
+                    }
+
+                    lastOperator = char;
+                    currentNumber = '';
+                } else {
+                    expression = 'Invalid';
+                    document.getElementById('display').value = expression;
+                    return;
+                }
+
+                i++;
+            }
+
+            expression = total + '';  // Implicit conversion to string
+            document.getElementById('display').value = expression;
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            text-transform: capitalize;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(30, 30, 157);
+        }
+
+        .logo {
+            color: white;
+            padding: 10px;
+            line-height: 40px;
+            font-size: 30px;
+        }
+
+        .main1 {
+            list-style-type: none;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        label {
+            float: left;
+        }
+
+        label a,
+        .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        label a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: rgb(9, 9, 109);
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(30, 30, 157);
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(9, 9, 91);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdowncontent2 {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0%s;
+
+            background-color: rgb(30, 30, 157);
+            z-index: 1;
+        }
+
+        .dropdowncontent2 a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdowncontent2 a:hover {
+            background-color: rgb(9, 9, 91);
+            /* position: absolute; */
+            /* left: 100%; */
+            display: block;
+        }
+
+        .dropdown2:hover .dropdowncontent2 {
+            display: block;
+        }
+
+        button {
+            line-height: 30px;
+        }
+        .dropdown2 a{
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="logo"><i class="fa-brands fa-html5"></i></div>
+        <div class="main1">
+            <label><a href="#home">home</a></label>
+            <label><a href="#about">about</a></label>
+            <label class="dropdown">
+                <a class="dropbtn">services<i class="fa-solid fa-angle-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#webdesigning">web designing</a>
+                    <a href="#marketin">marketing</a>
+                    <a href="#wordpress">wordPress</a>
+                        <div class="dropdown2">
+                            <a href="#more">more<i class="fa-solid fa-angle-down"></i></a>
+                            <div class="dropdowncontent2">
+                                <a href="#HTML">HTML</a>
+                                <a href="#CSS">CSS</a>
+                                <a href="#JavaScript">JavaScript</a>
+                                <a href="#jQuery">jQuery</a>
+                            </div>
+                        </div>
+                </div>
+            </label>
+            <label><a href="#blogs">blogs</a></label>
+            <label><a href="#contacts">contact</a></label>
+            <label><a href="#login" style="background-color: white;color: black ;">login</a></label>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>

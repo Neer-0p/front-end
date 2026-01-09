@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 2</title>
+</head>
+<body>
+    <table align="center">
+        <form action="">
+            <caption><h2>CONTACT FORM</h2></caption>
+            <tr>
+                <td>Full name:</td>
+                <td><input type="text" required pattern="[A-Za-z]{3,8}" placeholder="Enter your name"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" placeholder="Enter your mail" pattern="[a-z0-9]+@+[a-z]+.+[a-z]{2,3}$"></td>
+            </tr>
+            <tr>
+                <td>Phone number:</td>
+                <td><input type="tel" required pattern="[6789][0-9]{1,9}" maxlength="10"></td>
+            </tr>
+            <tr>
+                <td>Subject:</td>
+                <td><select name="" id="">
+                    <option value="" hidden>select subject</option>
+                    <option value="">MATHS</option>
+                    <option value="">ENGLISH</option>
+                    <option value="">SCIENCE</option>
+                    <option value="">PHYSICS</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td><textarea name="" id="" cols="40" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="submit"></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>

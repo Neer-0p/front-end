@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_2</title>
+    <link rel="stylesheet" href="/practise/CSS/style_2.css">
+</head>
+
+<body>
+    <h3>Student Registration Form without Using Table</h3>
+    <form action="">
+        <div>
+            <label for="">first name:</label>
+            <input type="text" placeholder="Ghanendra" required pattern="[A-Za-z]{3,8}">(max 50 character allowed)
+        </div>
+        <div>
+            <label for="">last name:</label>
+            <input type="text" placeholder="Yadav" required pattern="[A-Za-z]{3,8}">(max 50 character allowed)
+        </div>
+        <div>
+            <label for="">email ID:</label>
+            <input type="email" required placeholder="yghanendra@gmail.com">
+        </div>
+        <div>
+            <label for="">mobile number:</label>
+            <input type="tel" placeholder="7842xxxxxx" pattern="[6,7,8,9][0-9]{1-9}" maxlength="10">(10 digits allowed)
+        </div>
+        <div>
+            <label for="">gender:</label>
+            <input type="radio" name="gender">male
+            <input type="radio" name="gender">female
+        </div>
+        <div>
+            <label for="">date of birth(DOB):</label>
+            <input type="date">
+        </div>
+        <div>
+            <label for="" class="a">address:</label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <label for="">city:</label>
+            <input type="text" placeholder="Banglore">(max 50 character allowed)
+        </div>
+        <div>
+            <label for="">pin code:</label>
+            <input type="number" pattern="[0-9]{6}" placeholder="560068">(max 6 numbers allowed)
+        </div>
+        <div>
+            <label for="">state:</label>
+            <input type="text" placeholder="Karnataka">(max 50 character allowed)
+        </div>
+        <div>
+            <label for="">country:</label>
+            <input type="text" placeholder="India">
+        </div>
+        <div>
+            <label for="">hobbies:</label>
+            <input type="checkbox">drawing
+            <input type="checkbox">singing
+            <input type="checkbox">dancing
+            <input type="checkbox">sketching
+            <input type="checkbox">others <textarea name="" id="" cols="30" placeholder="Ex- Teaching(max 50 character allowed)"></textarea>
+        </div>
+        <div>
+            <label for="" class="a">qualification:</label>
+            <ul>
+                <li><input type="checkbox">high school(10th)</li>
+                <li><input type="checkbox">higher school(12th)</li>
+                <li><input type="checkbox">graduation(bachelors)</li>
+                <li><input type="checkbox">post graduation(masters)</li>
+                <li><input type="checkbox">phd</li>
+            </ul>
+        </div>
+        <div>
+            <label for="" class="s">courses applied for:</label>
+            <ul>
+                <li><input type="radio" value="xyz">BCA(bachelor of computer application)</li>
+                <li><input type="radio" value="xyz">B.Com(bachelor of commerce)</li>
+                <li><input type="radio" value="xyz">B.Sc(bachelor of science)</li>
+                <li><input type="radio" value="xyz">BA(bachelor of arts)</li>
+                <li><input type="radio" value="xyz">MCA(master of computer application)</li>
+                <li><input type="radio" value="xyz">M.Com(master of commerce)</li>
+                <li><input type="radio" value="xyz">M.Sc(master of science)</li>
+                <li><input type="radio" value="xyz">MA(master of arts)</li>
+            </ul>
+        </div>
+        <div style="text-align: center;"><input type="submit" style="background-color: green;color: white;border: none;">
+        <input type="submit" value="reset" style="background-color: red;color: white;border: none;"></div>
+    </form>
+</body>
+
+</html>

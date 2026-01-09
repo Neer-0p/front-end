@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Static{
+            user1(){
+                console.log("this data of user1")
+            }
+            x = function user2(){
+                console.log("this data of fun")
+            }
+            constructor(){
+                console.log("this is data of constructor")
+            }
+            static add(){
+                console.log("this is data of static")
+            }
+        }
+
+        let data = new Static
+        console.log(data)
+        data.user1
+
+    </script>
+</body>
+</html>

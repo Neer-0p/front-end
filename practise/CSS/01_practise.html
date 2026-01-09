@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_1</title>
+    <link rel="stylesheet" href="/practise/CSS/style_1.css">
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="">first name:</label>
+            <input type="text" required pattern="[A-Za-z]{3,9}">
+        </div>
+        <div>
+            <label for="">middle name:</label>
+            <input type="text" required pattern="[A-Za-z]{3,9}">
+        </div>
+        <div>
+            <label for="">last name:</label>
+            <input type="text" required pattern="[A-Za-z]{3,9}">
+        </div>
+        <div>
+            <label for="">course:</label>
+            <select name="" id="">
+                <option value="" hidden>Course</option>
+                <option value="">IT</option>
+                <option value="">CSE</option>
+                <option value="">CE</option>
+                <option value="">BCA</option>
+            </select>
+        </div>
+        <div><label class="x" for="">gender:</label>
+            <ul>
+            <li><input type="radio" name="gender">Male</li>
+            <li><input type="radio" name="gender">female</li>
+            <li><input type="radio" name="gender">Other</li>
+        </ul>
+        </div>
+        <div>
+            <label for="">phone:</label>
+            <input type="tel" required pattern="[6,7,8,9][0-9]{1,9}" maxlength="10">
+        </div>
+        <div><label class="x" for="">address:</label>
+        <textarea name="" id="" cols="50"></textarea></div>
+        <div>
+            <label for="">email:</label>
+            <input type="email" required>
+        </div>
+        <div>
+            <label for="">password:</label>
+            <input type="password">
+        </div>
+        <div>
+            <label for="">re-type password:</label>
+            <input type="password">
+        </div>
+        <input id="a" type="submit">
+        <input id="b" type="submit" value="reset">
+    </form>
+</body>
+</html>

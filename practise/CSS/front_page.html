@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .main {
+            position: relative;
+        }
+
+        .img {
+            height: 700px;
+            width: 100%;
+            background: url(https://www.carscoops.com/wp-content/uploads/2020/11/McLaren-Super-Garage.jpg);
+            background-size: 100% 100%;
+        }
+
+        .toptext {
+            text-align: center;
+            line-height: 300px;
+        }
+
+        .middletext {
+            color: white;
+            position: absolute;
+            right: 500px;
+            top: 150px;
+        }
+
+        .bottomtext {
+            color: white;
+            position: absolute;
+            right: 550px;
+            bottom: 0;
+            padding: 10px;
+            font-size: 30px;
+            word-spacing: 20px;
+        }
+
+        .message {
+            color: black;
+            font-size: 40px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 10px;
+            border: 2px solid white;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .hover{
+            background: linear-gradient(rgba(0, 0, 0, 0.4));
+            height: 700px;
+            transform: translateY(-700px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="img">
+            <div class="toptext">
+                <img width="150px" height="150px"
+                    src="https://i.etsystatic.com/24925057/r/il/46c91a/2546623084/il_fullxfull.2546623084_i74b.jpg"
+                    alt="">
+            </div>
+            <div class="middletext">
+                <h1>JADE & ANDY</h1>
+                <p style="letter-spacing: 4px;">BEST CAR DEALLER</p>
+            </div>
+            <div class="bottomtext">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-square-instagram" style="font-size: 35px;"></i>
+            </div>
+            <div class="message">
+                <i class="fa-solid fa-comment-dots"></i>
+            </div>
+        </div>
+    </div>
+    <div class="hover"></div>
+</body>
+
+</html>

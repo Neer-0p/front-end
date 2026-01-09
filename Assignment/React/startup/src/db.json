@@ -1,0 +1,127 @@
+{
+    "admin": [
+        {
+            "id": 1,
+            "name": "Admin",
+            "email": "admin@gmail.com",
+            "password": "123456"
+        },
+        {
+            "id": 2,
+            "name": "subadmin",
+            "email": "subadmin@gmail.com",
+            "password": "123456"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "user",
+            "email": "user@gmail.com",
+            "password": "1234",
+            "status": "unblock"
+        },
+        {
+            "id": 2,
+            "name": "het",
+            "email": "het@gmail.com",
+            "password": "1234",
+            "status": "block"
+        },
+        {
+            "id": 3,
+            "name": "varj",
+            "email": "varj@gmail.com",
+            "password": "1234",
+            "status": "unblock"
+        }
+    ],
+    "courses": [
+        {
+            "id": 1,
+            "cname": "Web Design",
+            "author": "john",
+            "date": "01jan,2026",
+            "img": "https://images.pexels.com/photos/1292241/pexels-photo-1292241.jpeg?_gl=1*whtw5w*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjIzMjUxMjkkbzMwJGcxJHQxNzYyMzI1MTcwJGoxOSRsMCRoMA..",
+            "title": "How to Web design",
+            "desc": "hello this web design course..."
+        },
+        {
+            "id": 2,
+            "cname": "Back-end ",
+            "author": "jiger",
+            "date": "03june,2026",
+            "img": "https://images.pexels.com/photos/7128957/pexels-photo-7128957.jpeg?_gl=1*ymwjx0*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjIzMjUxMjkkbzMwJGcxJHQxNzYyMzI1MzEzJGozNiRsMCRoMA..",
+            "title": "How to python course",
+            "desc": "hello this back-end course..."
+        },
+        {
+            "id": 3,
+            "cname": "Front-end",
+            "author": "Shubham sir",
+            "date": "03dec,2024",
+            "img": "https://images.pexels.com/photos/7948005/pexels-photo-7948005.jpeg?_gl=1*3fmq9n*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjIzMjUxMjkkbzMwJGcxJHQxNzYyMzI1MzEzJGozNiRsMCRoMA..",
+            "title": "How to Front-end course",
+            "desc": "hello this front-data course..."
+        }
+    ],
+    "service": [
+        {
+            "id" : 1,
+            "department":"Cyber Security",
+            "description":"Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed",
+            "img":"https://tse1.mm.bing.net/th/id/OIP.M5kaZp2NEUhULGQNoT0LvgHaFj?pid=Api&P=0&h=220"
+        },
+        {
+            "id" : 2,
+            "department":"Data Analytics",
+            "description":"Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed",
+            "img":"https://tse3.mm.bing.net/th/id/OIP.3C4wff6EpjXMzlaOZXOc2wHaHa?pid=Api&P=0&h=220"
+        },{
+            "id" : 3,
+            "department":"Web Development",
+            "description":"Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed",
+            "img":"https://tse3.mm.bing.net/th/id/OIP.Aymt6lwsbUMW__d1DQ3L-AHaEW?pid=Api&P=0&h=220"
+        }
+    ],
+    "price": [
+        {
+            "id":1,
+            "Plan":"Basic Plan",
+            "price":"49 $/month",
+            "includes":"HTML5 & CSS3,Bootstrap v5"
+        },
+        {
+            "id":2,
+            "Plan":"Standard Plan",
+            "price":"99 $/month",
+            "includes":"HTML5 & CSS3,Bootstrap v5,Responsive Layout"
+        },
+        {
+            "id":3,
+            "Plan":"Advanced Plan",
+            "price":"149 $/month",
+            "includes":"HTML5 & CSS3,Bootstrap v5,Responsive Layout,Cross-browser Support"
+        }
+    ],
+    "staff": [
+        {
+            "id":1,
+            "name":"Ayush",
+            "department":"Cyber Security",
+            "position":"Fresher"
+        },
+        {
+            "id":2,
+            "name":"Diya",
+            "department":"Back-end",
+            "position":"Senior-Developer"
+        },
+        {
+            "id":3,
+            "name":"Yash",
+            "department":"Front-end",
+            "position":"Developer"
+        }
+    ]
+}

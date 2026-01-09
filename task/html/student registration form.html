@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body style="background-color: aqua;">
+    <table  align="center">
+        <caption><h3><u>Student Registration Form Using Table in HTML</u></h3></caption>
+        <form action="">
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" placeholder="Ghanendra" required pattern="[A-Za-z]{3,8}">(Max 50 Character Allowed)</td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" placeholder="Yadav" required pattern="[A-Za-z]{3,8}">(Max 50 Character Allowed)</td>
+            </tr>
+            <tr>
+                <td>Email ID</td>
+                <td><input type="email" placeholder="yghanendra@gmail.com" required pattern="[a-z0-9]+@[a-z]+.[a-z]{2, 3}$"></td>
+            </tr>
+            <tr>
+                <td>Mobile Number</td>
+                <td><input type="tel" placeholder="7843xxxxxx" required pattern="[6789][0-9]{1,9}" maxlength="10">(10Digit Allowed)</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><input type="radio" name="gender">Male <input type="radio" name="gender">Female</td>
+            </tr>
+            <tr>
+                <td>Date of Birth(DOB)</td>
+                <td><select>
+                    <option value="">Day</option>
+                </select>
+                <select>
+                    <option value="">Month</option>
+                </select>
+                <select>
+                    <option value="">Year</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea  cols="30" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" placeholder="Banglore" required pattern="[A-Za-z]">(Max 50 Character Allowed)</td>
+            </tr>
+            <tr>
+                <td>Pin Code</td>
+                <td><input type="number" placeholder="560068" required pattern="[0-9]{1,6}" maxlength="6">(Max 6 Number Allowed)</td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td><input type="text" placeholder="Karnataka" required pattern="[A-Za-z]">(Max 50 Character Allowed)</td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td><input type="text" placeholder="India" required pattern="[A-Za-z]"></td>
+            </tr>
+            <tr>
+                <td>Hobbies</td>
+                <td><input type="checkbox">Drawing
+                    <input type="checkbox">Singing
+                    <input type="checkbox">Dancing
+                    <input type="checkbox">Sketching
+                    <input type="checkbox">Others <input type="text" placeholder="Ex- Teaching">()Max 50 Character Allowed</td>
+            </tr>
+            <tr>
+                <td>Qualification</td>
+                <td><div><input type="checkbox">High School(10th)</div>
+                    <div><input type="checkbox">Higher School(12th)</div>
+                    <div><input type="checkbox">Graduation(Bachelors)</div>
+                    <div><input type="checkbox">Post Graduation(Master)</div>
+                    <div><input type="checkbox">Phd</td></div>
+            </tr>
+            <tr>
+                <td>Courses <br> Applied For</td>
+                <td><div><input type="radio" name="Course">BCA(Bachelors of Computer Application)</div>
+                    <div><input type="radio" name="Course">B.Com(Bachelor of Commerce)</div>
+                    <div><input type="radio" name="Course">B.Sc(Bachelor of Scinece)</div>
+                    <div><input type="radio" name="Course">BA(Bachelor of Arts)</div>
+                    <div><input type="radio" name="Course">MCA(Master of Computer Application)</div>
+                    <div><input type="radio" name="Course">M.Com(Master of Commerce)</div>
+                    <div><input type="radio" name="Course">M.Sc(Master of Scinece)</div>
+                    <div><input type="radio" name="Course">MA(Master of Arts)</div></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="Submit"><input type="submit" value="Reset"></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class A{
+            x(){
+                console.log("this is class of A")
+            }
+        }
+
+        // single
+        class B extends A {
+            z(){
+                console.log("this is class of C")
+            }
+        }
+
+        // 2 multi
+        class E extends A{
+            b(){
+                console.log("this is class of E")
+            }
+        }
+        class F extends E{
+            c(){
+                console.log("this is class of F")
+            }
+        }
+        class G extends F{
+            d(){
+                console.log("this is class of G")
+            }
+        }
+
+
+    </script>
+</body>
+</html>
